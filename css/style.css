@@ -34,39 +34,37 @@ td,th {
 
 * {
     font-family: "Roboto", "Comic Sans MS";
-    font-size: 18px;
-}
+    font-size: 32px; }
 
 h1 {
-    font-size: 24px;
-    font-weight: 900;
-}
+    font-size: 46px;
+    font-weight: 900; }
 
 h2 {
-    font-size: 22px;
-    font-weight: 700;
-}
+    font-size: 44px;
+    font-weight: bold; }
 
 h3 {
-    font-size: 20px;
-    font-weight: 700;
-}
+    font-size: 40px;
+    font-weight: bold; }
 
 /* Page d'accueil */
+
+/* Logo */
 
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
+    align-items: center; }
 
 #logo {
-    height: 35px;
+    height: 55px;
     width: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
+    margin-top: 50px;
+    margin-bottom: 20px; }
+
+/* Location */
 
 #location {
     display: flex;
@@ -75,16 +73,108 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #eaeaea;
-    height: 40px;
-    width: auto;
-}
+    height: 80px;
+    width: auto; 
+    box-shadow: inset 0px 2px 2px rgb(0 0 0 / 10%);   }
 
 #map_marker {
-    padding-right: 25px;
-}
+    padding-right: 25px; }
 
 #location p {
+    font-weight: 500; }
+
+/* Head section */
+
+#head {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 20px; }
+
+#head h1 {
+    text-align: center;
+    width: 70%;
+    margin: 20px 40px; }
+
+#head p {
+    text-align: center;
+    font-weight: 300;
+    margin: 0px 20px;    }
+
+.head_btn {
+    position: relative;
+    margin-top: 45px;
+    margin-bottom: 80px;
+    padding: 25px 40px;
     font-weight: 500;
-}
+    color: white;
+    background: linear-gradient(180deg,#FF79DA, #9356DC) ;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer; }
+
+/* Functions */
+
+#function {
+    display: flex;
+    flex-direction: column;    
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 35px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    padding: 20px; }
+
+#function h2 {
+    font-weight: bold;
+    align-items: flex-start;
+    margin-left: 10px;}
+
+#step_function {
+    display: flex;  
+    flex-direction: column;    
+    gap: 30px; }
+
+.card_function {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    height: 130px;
+    margin-left: 35px;
+    margin-right: 15px;
+    padding: 10px 60px 10px 40px;
+    background-color: #f6f6f6;
+    border-radius: 30px; 
+    box-shadow: 5px 5px 5px gainsboro;}
+
+.icon_number {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    position: absolute;
+    color: white;
+    font-size: 22px;
+    background-color: #9356DC;
+    border-radius: 100%;
+    padding: 15px 20px;
+    margin-left: -70px; }
+
+.icon_type {
+    font-size: 30px;
+    font-weight: bold;
+    color: grey; 
+    margin-left: 30px;  }
+
+.card_function p {
+    margin-left: 30px;  }
+
+/* Restaurants */
 
 
+    
