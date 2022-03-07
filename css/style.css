@@ -34,7 +34,7 @@ td,th {
 
 * {
     font-family: "Roboto", "Comic Sans MS";
-    font-size: 16px;
+    font-size: 18px;
 }
 
 h1 {
@@ -51,4 +51,40 @@ h3 {
     font-size: 20px;
     font-weight: 700;
 }
+
+/* Page d'accueil */
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    height: 35px;
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#location {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    height: 40px;
+    width: auto;
+}
+
+#map_marker {
+    padding-right: 25px;
+}
+
+#location p {
+    font-weight: 500;
+}
+
 
