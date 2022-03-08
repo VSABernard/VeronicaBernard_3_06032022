@@ -182,7 +182,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 90px;
-    margin-bottom: 70px;
+    padding-bottom: 80px;
     background-color: #f6f6f6;  }
 
 #restaurants h2 {
@@ -249,11 +249,40 @@ header {
     color: inherit;
     transition: color 0.5s ease; }
 
+/* Footer */
 
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #353535;
+    color: white;   
+    padding-left: 40px;
+    padding-bottom: 80px;}
 
+h4 {
+    font-family: "Shrikhand";
+    font-size: 40px; 
+    margin-top: 50px;
+    margin-bottom: 30px;}
 
+.foot ul {
+    display: flex;
+    flex-direction: column;}
 
+.foot li {
+    padding-top: 15px;
+}
 
+#proposition a, #partner a {
+    display: flex;
+    flex-direction: row; }
+
+.fa-utensils, .fa-handshake-angle {
+    font-size: 25px;
+    width: 10px;
+    margin-right: 40px;
+    padding-top: 7px; }
 
 a {
     text-decoration: none;
