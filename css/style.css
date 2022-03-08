@@ -45,7 +45,7 @@ h2 {
     font-weight: 900; }
 
 h3 {
-    font-size: 40px;
+    font-size: 38px;
     font-weight: 900; }
 
 /* Page d'accueil */
@@ -200,34 +200,66 @@ header {
     padding-top: 30px;
     padding-bottom: 30px;   }
 
-.card_image {
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 350px; 
-    object-fit: cover;
-    object-position: 50% 62%;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px; }
-
 .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 40px 30px 60px;
-    height: 470px;
+    height: 450px;
     border-radius: 30px; 
     box-shadow: 5px 5px 5px gainsboro;  }
+
+.card_image {
+    width: 100%;
+    height: 340px; 
+    object-fit: cover;
+    object-position: 50% 62%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px; }
+
+/* "Nouveau" */
+
+.badge {
+    align-self: flex-end;
+    position: absolute;
+    font-size: 26px;
+    font-weight: 700;
+    color: #00A0B0;
+    background-color: #99E2D0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 20px;}
+
+/* Nom et emplacement du restaurant */
+
+.card_infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 20px 20px;}
 
 .card_name {
     margin-top: 10px; }
 
+.heart_container {
+    position: relative;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 20px;
+    color: inherit;
+    transition: color 0.5s ease; }
+
+
+
+
+
+
+
 a {
     text-decoration: none;
     color: inherit;
-    cursor: pointer;
-  }
-  a:active, a:hover, a:link, a:visited {
+    cursor: pointer;  }
+
+a:active, a:hover, a:link, a:visited {
     text-decoration: none;
-    color: inherit;
-  }
+    color: inherit;  }
