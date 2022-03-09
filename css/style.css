@@ -209,26 +209,28 @@ header {
     border-radius: 30px; 
     box-shadow: 5px 5px 5px gainsboro;  }
 
-.card_image {
+.card img {
     width: 100%;
     height: 340px; 
     object-fit: cover;
-    object-position: 50% 62%;
+    object-position: 50% 65%;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px; }
 
-/* "Nouveau" */
+/* Badge "Nouveau" */
 
 .badge {
-    align-self: flex-end;
+    display: grid;
+    place-items: center;
     position: absolute;
     font-size: 26px;
     font-weight: 700;
     color: #00A0B0;
     background-color: #99E2D0;
+    margin-top: 20px;
+    margin-left: 65%;
     padding: 10px 20px;
-    border-radius: 5px;
-    margin: 20px;}
+    border-radius: 5px; }
 
 /* Nom et emplacement du restaurant */
 
@@ -248,6 +250,12 @@ header {
     margin-right: 20px;
     color: inherit;
     transition: color 0.5s ease; }
+
+/*.fa-heart::after {
+    display: inline-block;
+    border: none; 
+    background-image: linear-gradient(180deg, #9356DC, #FF79DA);
+    transition: color 0.7s ease; }*/
 
 /* Footer */
 
@@ -292,3 +300,33 @@ a {
 a:active, a:hover, a:link, a:visited {
     text-decoration: none;
     color: inherit;  }
+
+
+
+/**
+ * ----------------------------------------
+ * animation wobble-hor-bottom
+ * ----------------------------------------
+ 
+ @keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      transform: translateX(0%);
+      transform-origin: 50% 50%;
+    }
+    15% {
+      transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }*/

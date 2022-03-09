@@ -1,0 +1,23 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet OC Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VSABernard/VeronicaBernard_3_06032022.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VSABernard/VeronicaBernard_3_06032022/issues"
+  },
+  "homepage": "https://github.com/VSABernard/VeronicaBernard_3_06032022#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.49.9"
+  }
+}
