@@ -65,6 +65,45 @@ h3 {
 }
 
 /* Variables SCSS */
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #353535;
+  color: white;
+  padding-left: 40px;
+  padding-bottom: 80px;
+}
+
+h4 {
+  font-family: "Shrikhand";
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.foot ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.foot li {
+  padding-top: 15px;
+}
+
+#proposition a, #partner a {
+  display: flex;
+  flex-direction: row;
+}
+
+.fa-utensils, .fa-handshake-angle {
+  font-size: 25px;
+  width: 10px;
+  margin-right: 40px;
+  padding-top: 7px;
+}
+
 /* Page d'accueil */
 /* Logo */
 header {
@@ -102,7 +141,7 @@ header {
 }
 
 /* Head section */
-#head {
+.head {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -111,24 +150,25 @@ header {
   background-color: #f6f6f6;
   padding: 20px;
 }
-#head_h1 {
+.head h1 {
   text-align: center;
   width: 70%;
   margin: 20px 40px;
 }
-#head_p {
+.head p {
   text-align: center;
   font-weight: 300;
   margin: 0px 20px;
 }
-#head_btn {
+
+.btn {
   position: relative;
   margin-top: 45px;
   margin-bottom: 80px;
   padding: 25px 40px;
   font-weight: 500;
   color: white;
-  background: linear-gradient(180deg, blue, #9356DC);
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -146,14 +186,13 @@ header {
   margin-right: 30px;
   padding: 20px;
 }
-
 #function h2 {
   font-weight: bold;
   align-items: flex-start;
   margin-left: 10px;
 }
 
-#step_function {
+ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -167,8 +206,7 @@ header {
   gap: 30px;
   height: 130px;
   margin-left: 35px;
-  margin-right: 15px;
-  padding: 10px 60px 10px 40px;
+  padding: 10px 40px 10px 40px;
   background-color: #f6f6f6;
   border-radius: 30px;
   box-shadow: 5px 5px 5px gainsboro;
@@ -176,6 +214,9 @@ header {
 .card_function:hover {
   background-color: rgba(147, 86, 220, 0.1);
   cursor: pointer;
+}
+.card_function p {
+  margin-left: 30px;
 }
 
 .icon_number {
@@ -199,10 +240,6 @@ header {
   margin-left: 30px;
 }
 
-.card_function p {
-  margin-left: 30px;
-}
-
 /* Restaurants */
 #restaurants {
   display: flex;
@@ -210,11 +247,9 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 90px;
-  margin-right: 30px;
   padding-bottom: 80px;
   background-color: #f6f6f6;
 }
-
 #restaurants h2 {
   margin-top: 100px;
   margin-bottom: 30px;
@@ -241,7 +276,6 @@ header {
   border-radius: 30px;
   box-shadow: 5px 5px 5px gainsboro;
 }
-
 .card img {
   width: 100%;
   height: 340px;
@@ -285,7 +319,7 @@ header {
   margin-right: 20px;
   color: inherit;
   transition: color 0.5s ease;
-  background-image: linear-gradient(180deg, #9356DC, blue);
+  background-image: linear-gradient(180deg, #9356DC, #FF79DA);
   opacity: 5;
   z-index: 1;
 }
@@ -301,45 +335,6 @@ header {
     border: none; 
     background-image: linear-gradient(180deg, #9356DC, #FF79DA);
     transition: color 0.3s ease; }*/
-/* Footer */
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background: #353535;
-  color: white;
-  padding-left: 40px;
-  padding-bottom: 80px;
-}
-
-h4 {
-  font-family: "Shrikhand";
-  font-size: 40px;
-  margin-top: 50px;
-  margin-bottom: 30px;
-}
-
-.foot ul {
-  display: flex;
-  flex-direction: column;
-}
-
-.foot li {
-  padding-top: 15px;
-}
-
-#proposition a, #partner a {
-  display: flex;
-  flex-direction: row;
-}
-
-.fa-utensils, .fa-handshake-angle {
-  font-size: 25px;
-  width: 10px;
-  margin-right: 40px;
-  padding-top: 7px;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -378,30 +373,5 @@ a:active, a:hover, a:link, a:visited {
       transform: translateX(-6px) rotate(-1.2deg);
     }
   }*/
-/* MEDIA QUERIES 
-
-@media screen and (min-width: 780px) {
-
-    #step_function {
-        flex-direction: row;    
-        flex-wrap: wrap;
-        justify-content: center; }
-
-    .card_function {
-        height: 70px;
-        margin-left: 5px;
-        margin-right: 15px;
-        padding: 10px;
-        background-color: #f6f6f6;
-        border-radius: 30px; 
-        box-shadow: 5px 5px 5px gainsboro;  }        
-
-
-
-
-
-
-
-}*/
 
 /*# sourceMappingURL=style.css.map */
