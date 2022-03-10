@@ -64,6 +64,7 @@ h3 {
   font-weight: 900;
 }
 
+/* Variables SCSS */
 /* Page d'accueil */
 /* Logo */
 header {
@@ -92,13 +93,12 @@ header {
   width: auto;
   box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
+#location_p {
+  font-weight: 500;
+}
 
 #map_marker {
   padding-right: 25px;
-}
-
-#location p {
-  font-weight: 500;
 }
 
 /* Head section */
@@ -111,27 +111,24 @@ header {
   background-color: #f6f6f6;
   padding: 20px;
 }
-
-#head h1 {
+#head_h1 {
   text-align: center;
   width: 70%;
   margin: 20px 40px;
 }
-
-#head p {
+#head_p {
   text-align: center;
   font-weight: 300;
   margin: 0px 20px;
 }
-
-.head_btn {
+#head_btn {
   position: relative;
   margin-top: 45px;
   margin-bottom: 80px;
   padding: 25px 40px;
   font-weight: 500;
   color: white;
-  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  background: linear-gradient(180deg, blue, #9356DC);
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -176,7 +173,6 @@ header {
   border-radius: 30px;
   box-shadow: 5px 5px 5px gainsboro;
 }
-
 .card_function:hover {
   background-color: rgba(147, 86, 220, 0.1);
   cursor: pointer;
@@ -289,7 +285,7 @@ header {
   margin-right: 20px;
   color: inherit;
   transition: color 0.5s ease;
-  background-image: linear-gradient(180deg, #9356DC, #FF79DA);
+  background-image: linear-gradient(180deg, #9356DC, blue);
   opacity: 5;
   z-index: 1;
 }

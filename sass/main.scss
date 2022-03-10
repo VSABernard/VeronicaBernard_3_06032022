@@ -48,6 +48,15 @@ h3 {
     font-size: 38px;
     font-weight: 900; }
 
+/* Variables SCSS */
+
+$colour-primary: #9356DC;
+$colour-secondary: blue;
+$colour-tertiary: #99E2D0;
+
+
+
+
 /* Page d'accueil */
 
 /* Logo */
@@ -75,13 +84,16 @@ header {
     background-color: #eaeaea;
     height: 80px;
     width: auto; 
-    box-shadow: inset 0px 2px 2px rgb(0 0 0 / 10%);   }
+    box-shadow: inset 0px 2px 2px rgb(0 0 0 / 10%);   
+
+    &_p {
+        font-weight: 500; }
+}
 
 #map_marker {
     padding-right: 25px; }
 
-#location p {
-    font-weight: 500; }
+
 
 /* Head section */
 
@@ -92,29 +104,30 @@ header {
     justify-content: center;
     align-items: center;
     background-color: #f6f6f6;
-    padding: 20px; }
+    padding: 20px; 
 
-#head h1 {
-    text-align: center;
-    width: 70%;
-    margin: 20px 40px; }
+    &_h1 {
+        text-align: center;
+        width: 70%;
+        margin: 20px 40px; }
 
-#head p {
-    text-align: center;
-    font-weight: 300;
-    margin: 0px 20px;    }
+    &_p {
+        text-align: center;
+        font-weight: 300;
+        margin: 0px 20px;   }
 
-.head_btn {
-    position: relative;
-    margin-top: 45px;
-    margin-bottom: 80px;
-    padding: 25px 40px;
-    font-weight: 500;
-    color: white;
-    background: linear-gradient(180deg,#FF79DA, #9356DC) ;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer; }
+    &_btn {
+        position: relative;
+        margin-top: 45px;
+        margin-bottom: 80px;
+        padding: 25px 40px;
+        font-weight: 500;
+        color: white;
+        background: linear-gradient(180deg, $colour-secondary, $colour-primary) ;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer; }
+}
 
 /* Functions */
 
@@ -151,12 +164,11 @@ header {
     padding: 10px 60px 10px 40px;
     background-color: #f6f6f6;
     border-radius: 30px; 
-    box-shadow: 5px 5px 5px gainsboro;}
-
-.card_function:hover {
-    background-color: rgba(147, 86, 220, 0.1);
-    cursor: pointer; }
-
+    box-shadow: 5px 5px 5px gainsboro;
+    &:hover {
+        background-color: rgba(147, 86, 220, 0.1);
+        cursor: pointer; }
+}
 .icon_number {
     display: flex;
     flex-direction: row;
@@ -165,7 +177,7 @@ header {
     position: absolute;
     color: white;
     font-size: 22px;
-    background-color: #9356DC;
+    background-color: $colour-primary;
     border-radius: 100%;
     padding: 15px 20px;
     margin-left: -70px; }
@@ -232,7 +244,7 @@ header {
     font-size: 26px;
     font-weight: 700;
     color: #00A0B0;
-    background-color: #99E2D0;
+    background-color: $colour-tertiary;
     margin-top: 20px;
     margin-right: 20px;
     padding: 10px 20px;
@@ -256,7 +268,7 @@ header {
     margin-right: 20px;
     color: inherit;
     transition: color 0.5s ease;
-    background-image: linear-gradient(180deg, #9356DC, #FF79DA);
+    background-image: linear-gradient(180deg, $colour-primary, $colour-secondary);
     opacity: 5;
     z-index: 1;}
     /*transform: scale(0); 
