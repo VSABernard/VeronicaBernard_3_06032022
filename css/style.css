@@ -1,110 +1,4 @@
-/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-
-ul {
-  list-style: none;
-}
-
-button, input, select {
-  margin: 0;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-img, video {
-  height: auto;
-  max-width: 100%;
-}
-
-iframe {
-  border: 0;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td, th {
-  padding: 0;
-}
-
-/* Fonts */
-* {
-  font-family: "Roboto", "Comic Sans MS";
-  font-size: 32px;
-}
-
-h1 {
-  font-size: 46px;
-  font-weight: 900;
-}
-
-h2 {
-  font-size: 44px;
-  font-weight: 900;
-}
-
-h3 {
-  font-size: 38px;
-  font-weight: 900;
-}
-
 /* Variables SCSS */
-/* Footer */
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background: #353535;
-  color: white;
-  padding-left: 40px;
-  padding-bottom: 80px;
-}
-
-h4 {
-  font-family: "Shrikhand";
-  font-size: 40px;
-  margin-top: 50px;
-  margin-bottom: 30px;
-}
-
-.foot ul {
-  display: flex;
-  flex-direction: column;
-}
-
-.foot li {
-  padding-top: 15px;
-}
-
-#proposition a, #partner a {
-  display: flex;
-  flex-direction: row;
-}
-
-.fa-utensils, .fa-handshake-angle {
-  font-size: 25px;
-  width: 10px;
-  margin-right: 40px;
-  padding-top: 7px;
-}
-
-/* Page d'accueil */
 /* Logo */
 header {
   display: flex;
@@ -140,7 +34,7 @@ header {
   padding-right: 25px;
 }
 
-/* Head section */
+/* Exploration section */
 .head {
   display: flex;
   flex-direction: column;
@@ -161,9 +55,9 @@ header {
   margin: 0px 20px;
 }
 .head button {
-  position: relative;
   margin-top: 45px;
   margin-bottom: 80px;
+  position: relative;
   padding: 25px 40px;
   font-weight: 500;
   color: white;
@@ -171,7 +65,7 @@ header {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 2px 1px 16px -3px #000000;
+  box-shadow: 5px 5px 5px gainsboro;
 }
 .head button:hover {
   transform: scale(1.05);
@@ -341,6 +235,111 @@ header {
     border: none; 
     background-image: linear-gradient(180deg, #9356DC, #FF79DA);
     transition: color 0.3s ease; }*/
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #353535;
+  color: white;
+  padding-left: 40px;
+  padding-bottom: 80px;
+}
+
+h4 {
+  font-family: "Shrikhand";
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.foot ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.foot li {
+  padding-top: 15px;
+}
+
+#proposition a, #partner a {
+  display: flex;
+  flex-direction: row;
+}
+
+.fa-utensils, .fa-handshake-angle {
+  font-size: 25px;
+  width: 10px;
+  margin-right: 40px;
+  padding-top: 7px;
+}
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+/* Fonts */
+* {
+  font-family: "Roboto", "Comic Sans MS";
+  font-size: 32px;
+}
+
+h1 {
+  font-size: 46px;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 44px;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 38px;
+  font-weight: 900;
+}
+
 a {
   text-decoration: none;
   color: inherit;

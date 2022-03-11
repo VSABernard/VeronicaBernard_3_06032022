@@ -1,0 +1,14 @@
+@use '../utils/variables.scss';
+@use '../utils/mixins.scss';
+
+@mixin button {
+    position: relative;
+    padding: 25px 40px;
+    font-weight: 500;
+    color: white;
+    background-image: linear-gradient(180deg, variables.$colour-secondary, variables.$colour-primary) ;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer; 
+    @include mixins.shadow-block;
+}

@@ -1,0 +1,19 @@
+/* Location */
+
+#location {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    height: 80px;
+    width: auto; 
+    box-shadow: inset 0px 2px 2px rgb(0 0 0 / 10%);   
+
+    &_p {
+        font-weight: 500; }
+}
+
+#map_marker {
+    padding-right: 25px; }

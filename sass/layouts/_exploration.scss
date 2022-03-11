@@ -1,0 +1,35 @@
+@use '../utils/variables.scss';
+@use '../utils/mixins.scss';
+@use '../components/buttons';
+
+/* Exploration section */
+
+.head {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: variables.$colour-background;
+    padding: 20px; 
+
+    & h1 {
+        text-align: center;
+        width: 70%;
+        margin: 20px 40px; }
+
+    & p {
+        text-align: center;
+        font-weight: 300;
+        margin: 0px 20px;   }
+
+    & button {        
+        margin-top: 45px;
+        margin-bottom: 80px;
+        @include buttons.button;  
+        }
+    & button:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
