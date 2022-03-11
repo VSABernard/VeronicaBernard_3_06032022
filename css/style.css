@@ -86,15 +86,28 @@ header {
   counter-reset: number;
 }
 #function h2 {
-  font-weight: bold;
   align-items: flex-start;
   margin-left: 10px;
+}
+@media screen and (min-width: 769px) {
+  #function h2 {
+    align-self: center;
+  }
 }
 #function ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin-left: 35px;
+}
+@media screen and (min-width: 769px) {
+  #function ol {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: no-wrap;
+    margin-left: 0;
+    gap: 10px;
+  }
 }
 #function ol li {
   flex-grow: 1;
@@ -127,7 +140,6 @@ header {
 #function ol li p {
   margin-left: 30px;
 }
-
 .icon_type {
   font-size: 30px;
   font-weight: bold;
@@ -152,7 +164,7 @@ header {
   margin-left: 30px;
 }
 
-#block_cards {
+.block_cards {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -162,6 +174,17 @@ header {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+@media screen and (min-width: 768px) {
+  .block_cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 200px 0px;
+    margin-bottom: 200px;
+  }
+}
 
 .card {
   display: flex;
@@ -169,8 +192,16 @@ header {
   justify-content: space-between;
   margin: 40px 30px 60px;
   height: 450px;
+  width: 100%;
   border-radius: 30px;
   box-shadow: 5px 5px 5px gainsboro;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    height: 300px;
+    width: 40%;
+    margin-bottom: 40px;
+  }
 }
 .card img {
   width: 100%;
