@@ -84,10 +84,16 @@ header {
   justify-content: center;
   gap: 35px;
   margin-top: 50px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   margin-right: 30px;
   padding: 20px;
   counter-reset: number;
+}
+@media screen and (min-width: 769px) {
+  #function {
+    padding: 0;
+    margin-bottom: 0;
+  }
 }
 #function h2 {
   align-items: flex-start;
@@ -110,6 +116,7 @@ header {
     justify-content: space-around;
     flex-wrap: wrap;
     margin-left: 5px;
+    margin-bottom: 10px;
     gap: 15px;
   }
 }
@@ -148,17 +155,23 @@ header {
 }
 @media screen and (min-width: 769px) {
   #function ol li p {
-    font-size: 25px;
+    font-size: 20px;
     margin-left: -30px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #function ol li p {
+    font-size: 32px;
   }
 }
 @media screen and (min-width: 769px) {
   #function ol li {
-    flex-basis: 40%;
+    flex-basis: 43%;
     max-width: 50%;
     align-items: center;
-    padding: 30px;
-    margin-left: 30px;
+    padding: 20px 5px 20px 40px;
+    margin-left: 25px;
   }
 }
 
@@ -186,6 +199,11 @@ header {
   padding-bottom: 80px;
   background-color: #f6f6f6;
 }
+@media screen and (min-width: 769px) {
+  #restaurants {
+    padding-bottom: 50px;
+  }
+}
 #restaurants h2 {
   margin-top: 100px;
   margin-bottom: 30px;
@@ -194,6 +212,7 @@ header {
 @media screen and (min-width: 769px) {
   #restaurants h2 {
     align-self: center;
+    margin-top: 50px;
     margin-bottom: 10px;
   }
 }
@@ -215,8 +234,7 @@ header {
     justify-content: space-around;
     flex-wrap: wrap;
     height: auto;
-    gap: 200px 0px;
-    margin-bottom: 200px;
+    margin: 20px 10px;
   }
 }
 
@@ -232,9 +250,9 @@ header {
 }
 @media screen and (min-width: 768px) {
   .card {
-    height: 300px;
-    width: 40%;
-    margin-bottom: 40px;
+    height: 450px;
+    width: 47%;
+    margin: 20px 10px;
   }
 }
 .card img {
@@ -272,12 +290,21 @@ header {
   justify-content: space-between;
   margin: 0 20px 20px;
 }
+.card_infos name {
+  margin-top: 10px;
+}
+@media screen and (min-width: 769px) {
+  .card_infos h3 {
+    font-size: 28px;
+  }
+}
 .card_infos p {
   font-size: 32px;
 }
-
-.card_name {
-  margin-top: 10px;
+@media screen and (min-width: 769px) {
+  .card_infos p {
+    font-size: 26px;
+  }
 }
 
 .fa-heart {
@@ -287,6 +314,12 @@ header {
   margin-top: 20px;
   margin-right: 20px;
   color: inherit;
+}
+@media screen and (min-width: 769px) {
+  .fa-heart {
+    margin-top: 5px;
+    margin-right: 5px;
+  }
 }
 
 /*transform: scale(0); */
@@ -320,6 +353,11 @@ footer h4 {
   margin-bottom: 30px;
   margin-left: 20px;
 }
+@media screen and (min-width: 769px) {
+  footer {
+    align-items: center;
+  }
+}
 
 .foot {
   display: flex;
@@ -329,6 +367,11 @@ footer h4 {
   font-size: 32px;
   padding-top: 20px;
   margin-left: 20px;
+}
+@media screen and (min-width: 769px) {
+  .foot {
+    align-items: center;
+  }
 }
 
 #proposition a, #partner a {

@@ -12,6 +12,11 @@
     padding-bottom: 80px;
     background-color: variables.$colour-background;  
 
+    @media screen and (min-width:769px) {
+        padding-bottom: 50px;
+    }
+
+
     & h2 {
         margin-top: 100px;
         margin-bottom: 30px;
@@ -19,6 +24,7 @@
     
         @media screen and (min-width:769px) {
             align-self: center;
+            margin-top: 50px;
             margin-bottom: 10px;
         }
     }
@@ -40,8 +46,7 @@
         justify-content: space-around;
         flex-wrap: wrap;
         height: auto;
-        gap: 200px 0px;
-        margin-bottom: 200px;
+        margin: 20px 10px;
     }
 }
 
@@ -56,9 +61,9 @@
     @include mixins.shadow-block;  
 
     @media screen and (min-width:768px){
-        height: 300px;
-        width: 40%;
-        margin-bottom: 40px;
+        height: 450px;
+        width: 47%;
+        margin: 20px 10px;
     }
 
     & img {
@@ -98,12 +103,21 @@
     justify-content: space-between;
     margin: 0 20px 20px;
 
-    & p {
-        font-size: 32px;    }    
-}
+    & name {
+        margin-top: 10px; }
 
-.card_name {
-    margin-top: 10px; }
+    & h3 {
+        @media screen and (min-width:769px) {
+            font-size: 28px;  }
+    }
+
+    & p {
+        font-size: 32px;   
+    
+        @media screen and (min-width:769px) {
+            font-size: 26px;   }
+    }    
+}
 
 .fa-heart {
     position: relative;
@@ -111,7 +125,13 @@
     cursor: pointer;
     margin-top: 20px;
     margin-right: 20px;
-    color: inherit;}
+    color: inherit;
+
+    @media screen and (min-width:769px) {
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    }
     // transition: color 0.5s ease;
     // background-image: linear-gradient(180deg, variables.$colour-primary, variables.$colour-secondary);
     // opacity: 5;
