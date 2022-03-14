@@ -431,6 +431,10 @@ td, th {
   padding: 0;
 }
 
+html {
+  min-width: fit-content;
+}
+
 /* Fonts */
 * {
   font-family: "Roboto", "Comic Sans MS";
@@ -449,6 +453,14 @@ h2 {
 h3 {
   font-size: 38px;
   font-weight: 900;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 32px;
 }
 
 a {

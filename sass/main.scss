@@ -26,7 +26,7 @@ button,input,select {
 html {
     box-sizing:border-box }
 
-*,*::before,*::after {
+*,*::before,*::after {;
     box-sizing:inherit }
 
 img,video {
@@ -41,13 +41,13 @@ table {
 td,th {
     padding:0 }
 
+html {
+    min-width: fit-content; }
 
 /* Fonts */
 
 * {
-    font-family: "Roboto", "Comic Sans MS";
-    // font-size: 32px; 
-}
+    font-family: "Roboto", "Comic Sans MS"; }
     
 h1 {
     font-size: 46px;
@@ -61,6 +61,12 @@ h3 {
     font-size: 38px;
     font-weight: 900; }
 
+h4 {
+    font-size: 30px; }
+
+p {
+    font-size: 32px; }
+
 
 a {
     text-decoration: none;
@@ -70,7 +76,6 @@ a {
 a:active, a:hover, a:link, a:visited {
     text-decoration: none;
     color: inherit; }
-
 
 
 
