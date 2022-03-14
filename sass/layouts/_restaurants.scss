@@ -15,7 +15,13 @@
     & h2 {
         margin-top: 100px;
         margin-bottom: 30px;
-        margin-left: 30px;  }
+        margin-left: 30px;
+    
+        @media screen and (min-width:769px) {
+            align-self: center;
+            margin-bottom: 10px;
+        }
+    }
 }
 
 .block_cards {    
@@ -43,7 +49,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 40px 30px 60px;
+    margin: 40px 30px 60px 5px;
     height: 450px;
     width: 100%;
     border-radius: 30px; 
@@ -90,22 +96,27 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 20px 20px;}
+    margin: 0 20px 20px;
+
+    & p {
+        font-size: 32px;    }    
+}
 
 .card_name {
     margin-top: 10px; }
 
 .fa-heart {
     position: relative;
+    font-size: 32px;
     cursor: pointer;
     margin-top: 20px;
     margin-right: 20px;
-    color: inherit;
-    transition: color 0.5s ease;
-    background-image: linear-gradient(180deg, variables.$colour-primary, variables.$colour-secondary);
-    opacity: 5;
-    z-index: 1;}
-    /*transform: scale(0); 
+    color: inherit;}
+    // transition: color 0.5s ease;
+    // background-image: linear-gradient(180deg, variables.$colour-primary, variables.$colour-secondary);
+    // opacity: 5;
+    // z-index: 1;
+    /*transform: scale(0); */
 
 .fa-heart::before {
     content: '';
@@ -115,4 +126,4 @@
     display: inline-block;
     border: none; 
     background-image: linear-gradient(180deg, #9356DC, #FF79DA);
-    transition: color 0.3s ease; }*/
+    transition: color 0.3s ease; }

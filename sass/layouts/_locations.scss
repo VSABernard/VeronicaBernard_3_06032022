@@ -11,9 +11,11 @@
     width: auto; 
     box-shadow: inset 0px 2px 2px rgb(0 0 0 / 10%);   
 
-    &_p {
+    & p {
+        font-size: 32px;
         font-weight: 500; }
 }
 
 #map_marker {
+    font-size: 32px;
     padding-right: 25px; }

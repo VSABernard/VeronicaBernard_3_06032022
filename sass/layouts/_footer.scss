@@ -6,29 +6,37 @@ footer {
     justify-content: space-around;
     background: #353535;
     color: white;   
+    padding-top: 30px;
     padding-left: 40px;
-    padding-bottom: 80px;}
+    padding-bottom: 80px;   
 
-h4 {
-    font-family: "Shrikhand";
-    font-size: 40px; 
-    margin-top: 50px;
-    margin-bottom: 30px;}
-
-.foot ul {
-    display: flex;
-    flex-direction: column;}
-
-.foot li {
-    padding-top: 15px;
+    & h4 {
+        font-family: "Shrikhand";
+        font-size: 40px; 
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 20px;}
 }
+
+.foot {
+    display: flex;
+    flex-direction: column;
+
+    & li {
+        font-size: 32px;
+        padding-top: 20px;
+        margin-left: 20px;
+}
+    }
+
+ 
 
 #proposition a, #partner a {
     display: flex;
     flex-direction: row; }
 
 .fa-utensils, .fa-handshake-angle {
-    font-size: 25px;
+    font-size: 32px;
     width: 10px;
     margin-right: 40px;
     padding-top: 7px; }
