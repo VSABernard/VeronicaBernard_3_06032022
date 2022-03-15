@@ -135,7 +135,7 @@ html {
 h1 {
   font-family: Shrikhand;
   font-size: 52px;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 h2 {
@@ -144,19 +144,42 @@ h2 {
   border-bottom: 4px solid #99E2D0;
   width: 100px;
   height: 55px;
+  margin-bottom: 70px;
+}
+@media screen and (min-width: 769px) {
+  h2 {
+    font-size: 26px;
+    height: 40px;
+    margin-bottom: 90px;
+  }
 }
 
 h3 {
   font-size: 38px;
   font-weight: 900;
 }
+@media screen and (min-width: 769px) {
+  h3 {
+    font-size: 26px;
+  }
+}
 
 h4 {
   font-size: 30px;
 }
+@media screen and (min-width: 769px) {
+  h4 {
+    font-size: 22px;
+  }
+}
 
 p {
   font-size: 32px;
+}
+@media screen and (min-width: 769px) {
+  p {
+    font-size: 22px;
+  }
 }
 
 a {
@@ -216,8 +239,9 @@ main {
 .main_menu {
   display: flex;
   flex-direction: column;
+  height: 100%;
   margin-top: -100px;
-  background-color: white;
+  background-color: #f6f6f6;
   border-top-left-radius: 80px;
   border-top-right-radius: 80px;
 }
@@ -244,9 +268,15 @@ main {
 .menu {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 45px;
   margin-left: 20px;
-  margin-bottom: 100px;
+}
+@media screen and (min-width: 769px) {
+  .menu {
+    align-self: center;
+    width: 60%;
+    gap: 35px;
+  }
 }
 
 .container {
@@ -256,8 +286,17 @@ main {
   border-radius: 30px;
   height: 140px;
   max-width: 97%;
-  border: 2px solid blue;
+  background-color: white;
+  box-shadow: 5px 5px 5px gainsboro;
   padding-left: 20px;
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@media screen and (min-width: 769px) {
+  .container {
+    height: 100px;
+    margin-bottom: -20px;
+  }
 }
 
 .note {
@@ -298,6 +337,8 @@ button {
   margin-top: 50px;
   font-size: 32px;
   width: 50%;
+  margin-top: -20px;
+  margin-bottom: 100px;
   position: relative;
   padding: 25px 40px;
   font-weight: 500;
@@ -307,6 +348,32 @@ button {
   border-radius: 50px;
   cursor: pointer;
   box-shadow: 5px 5px 5px gainsboro;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
 }
 
 /*# sourceMappingURL=page.css.map */

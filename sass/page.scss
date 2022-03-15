@@ -8,96 +8,103 @@
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 100%;
-    font-weight: normal;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  button, input, select {
-    margin: 0;
-  }
-  
-  html {
-    box-sizing: border-box;
-  }
-  
-  *, *::before, *::after {
-    box-sizing: inherit;
-  }
-  
-  img, video {
-    height: auto;
-    max-width: 100%;
-  }
-  
-  iframe {
-    border: 0;
-  }
-  
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  
-  td, th {
-    padding: 0;
-  }
-  
-  html {
-    min-width: fit-content;
-  }
-  
-  /* Fonts */
-  * {
+   margin: 0;
+   padding: 0;
+ }
+ 
+ h1, h2, h3, h4, h5, h6 {
+   font-size: 100%;
+   font-weight: normal;
+ }
+ 
+ ul {
+   list-style: none;
+ }
+ 
+ button, input, select {
+   margin: 0;
+ }
+ 
+ html {
+   box-sizing: border-box;
+ }
+ 
+ *, *::before, *::after {
+   box-sizing: inherit;
+ }
+ 
+ img, video {
+   height: auto;
+   max-width: 100%;
+ }
+ 
+ iframe {
+   border: 0;
+ }
+ 
+ table {
+   border-collapse: collapse;
+   border-spacing: 0;
+ }
+ 
+ td, th {
+   padding: 0;
+ }
+ 
+ html {
+   min-width: fit-content;
+ }
+ 
+ /* Fonts */
+* {
     font-family: "Roboto", "Comic Sans MS";
-  }
-  
-  h1 {
+}
+
+h1 {
     font-family: Shrikhand;
     font-size: 52px;
-    font-weight: 900;
+    font-weight: 500; }
 
-    
-  }
-  
-  h2 {
+h2 {
     font-size: 38px;
     font-weight: 500;
     border-bottom: 4px solid variables.$colour-tertiary;
     width: 100px;
-    height: 55px;}
-  
-  h3 {
+    height: 55px; 
+    margin-bottom: 70px;
+    @media screen and (min-width:769px) {
+        font-size: 26px; 
+        height: 40px;
+        margin-bottom: 90px;}
+}
+
+h3 {
     font-size: 38px;
-    font-weight: 900;
-  }
-  
-  h4 {
-    font-size: 30px;
-  }
-  
-  p {
-    font-size: 32px;
-  }
-  
-  a {
+    font-weight: 900; 
+    @media screen and (min-width:769px) {
+        font-size: 26px; }
+}
+
+h4 {
+    font-size: 30px; 
+    @media screen and (min-width:769px) {
+        font-size: 22px; }
+}
+
+p {
+    font-size: 32px; 
+    @media screen and (min-width:769px) {
+        font-size: 22px; } 
+}
+
+a {
     text-decoration: none;
     color: inherit;
-    cursor: pointer;
-  }
-  
-  a:active, a:hover, a:link, a:visited {
+    cursor: pointer; }
+
+a:active, a:hover, a:link, a:visited {
     text-decoration: none;
-    color: inherit;
-  }
+    color: inherit; }
   
 
 /* PAGE RESTAURANT */
@@ -106,8 +113,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 20px; 
-     }
+    margin: 20px;  }
 
 .fa-arrow-left {
     display: flex;
@@ -137,16 +143,15 @@ main {
     @media screen and (min-width:769px) {
         height: 450px;
         width: 100%;
-        object-position: 50% 70%;
-        }
-    
+        object-position: 50% 70%; }
 }
 
 .main_menu {
     display: flex;
     flex-direction: column;
+    height: 100%;
     margin-top: -100px;
-    background-color: white;
+    background-color: variables.$colour-background;
     border-top-left-radius: 80px;
     border-top-right-radius: 80px; }
 
@@ -169,9 +174,14 @@ main {
 .menu {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 45px;
     margin-left: 20px;
-    margin-bottom: 100px; }
+  
+    @media screen and (min-width:769px) {
+      align-self: center;
+      width: 60%;
+      gap: 35px; }
+}
 
 .container {
     display: flex;
@@ -180,9 +190,16 @@ main {
     border-radius: 30px;
     height: 140px;
     max-width: 97%;
-    border: 2px solid blue;
-    padding-left: 20px; }
-    
+    background-color: white;
+    @include mixins.shadow-block;
+    padding-left: 20px; 
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;   
+
+    @media screen and (min-width:769px) {
+        height: 100px;
+        margin-bottom: -20px; }
+}
     
 .note {
     display: flex;
@@ -198,7 +215,7 @@ main {
         overflow: hidden;
         text-overflow: ellipsis;
         direction: ltr;   }
-    }
+}
 
 .price {
       display: flex;
@@ -214,17 +231,43 @@ main {
       font-size: 50px;
       justify-self: center;
       align-self: center;
-  }
+}
 
-  button {        
+button {        
     align-self: center;
     margin-top: 50px;
     font-size: 32px;
     width: 50%;
-    @include mixins.button;  
-    }
+    margin-top: -20px;
+    margin-bottom: 100px;
+    @include mixins.button;  }
   
-  
+
+/**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
   
 
 
