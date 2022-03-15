@@ -1,4 +1,20 @@
+@use '../utils/variables';
+
 @mixin shadow-block {
     box-shadow: 5px 5px 5px gainsboro; 
 }
+
+@mixin button {
+    position: relative;
+    padding: 25px 40px;
+    font-weight: 500;
+    color: white;
+    background-image: linear-gradient(180deg, variables.$colour-secondary, variables.$colour-primary) ;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer; 
+    @include shadow-block;
+}
+
+
 

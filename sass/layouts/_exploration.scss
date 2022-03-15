@@ -1,6 +1,5 @@
-@use '../utils/variables.scss';
-@use '../utils/mixins.scss';
-@use '../components/buttons';
+@use '../utils/variables';
+@use '../utils/mixins';
 
 /* Exploration section */
 
@@ -28,7 +27,7 @@
         margin-top: 45px;
         margin-bottom: 80px;
         font-size: 32px;
-        @include buttons.button;  
+        @include mixins.button;  
         }
     & button:hover {
         transform: scale(1.05);
