@@ -1,0 +1,160 @@
+@use './utils/variables';
+@use './utils/mixins';
+@use './components/buttons';
+@use './layouts/hearts';
+@use './layouts/footer';
+
+
+
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  button, input, select {
+    margin: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  img, video {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  iframe {
+    border: 0;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  td, th {
+    padding: 0;
+  }
+  
+  html {
+    min-width: fit-content;
+  }
+  
+  /* Fonts */
+  * {
+    font-family: "Roboto", "Comic Sans MS";
+  }
+  
+  h1 {
+    font-family: Shrikhand;
+    font-size: 52px;
+    font-weight: 900;
+  }
+  
+  h2 {
+    font-size: 38px;
+    font-weight: 500;
+  }
+  
+  h3 {
+    font-size: 38px;
+    font-weight: 900;
+  }
+  
+  h4 {
+    font-size: 30px;
+  }
+  
+  p {
+    font-size: 32px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  a:active, a:hover, a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+
+/* PAGE MENU */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px; 
+     }
+
+.fa-arrow-left {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    font-size: 28px;
+    font-weight: 900;
+    padding-top: 15px;
+    padding-left: 30px; }
+    
+.logo {
+    display: flex;
+    justify-content: center;
+    flex: 3; 
+
+    & img {
+        height: 60px; }
+  }
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.background_photo {
+
+}
+
+.main_menu {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    background-color: white;
+    border-color: rouge;
+}
+
+
+
+.card_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px 30px;  }
+
+.fa-heart {
+    font-size: 45px;
+    margin-top: 15px;
+    padding-right: 40px;
+  }
+
+
+

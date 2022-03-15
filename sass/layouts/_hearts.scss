@@ -1,0 +1,32 @@
+@use '../utils/variables.scss';
+@use '../utils/mixins.scss';
+
+
+.fa-heart {
+    position: relative;
+    font-size: 32px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 20px;
+    color: inherit;
+
+    @media screen and (min-width:769px) {
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    }
+    // transition: color 0.5s ease;
+    // background-image: linear-gradient(180deg, variables.$colour-primary, variables.$colour-secondary);
+    // opacity: 5;
+    // z-index: 1;
+    /*transform: scale(0); */
+
+.fa-heart::before {
+    content: '';
+    border: black;}
+
+.fa-heart::after {
+    display: inline-block;
+    border: none; 
+    background-image: linear-gradient(180deg, #9356DC, #FF79DA);
+    transition: color 0.3s ease; }
