@@ -232,8 +232,10 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-self: center;
     flex-wrap: wrap;
     height: auto;
+    width: 60%;
     margin: 20px 10px;
   }
 }

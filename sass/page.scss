@@ -71,11 +71,10 @@ h2 {
     border-bottom: 4px solid variables.$colour-tertiary;
     width: 100px;
     height: 55px; 
-    margin-bottom: 70px;
     @media screen and (min-width:769px) {
         font-size: 26px; 
         height: 40px;
-        margin-bottom: 90px;}
+        width: 80px; }
 }
 
 h3 {
@@ -174,13 +173,14 @@ main {
 .menu {
     display: flex;
     flex-direction: column;
-    gap: 45px;
+    gap: 30px;
+    margin-bottom: 50px;
     margin-left: 20px;
   
     @media screen and (min-width:769px) {
       align-self: center;
-      width: 60%;
-      gap: 35px; }
+      width: 50%; 
+      gap: 20px;}
 }
 
 .container {
@@ -193,12 +193,11 @@ main {
     background-color: white;
     @include mixins.shadow-block;
     padding-left: 20px; 
-    -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;   
+    -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.44s both;
+	  animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.44s both; 
 
     @media screen and (min-width:769px) {
-        height: 100px;
-        margin-bottom: -20px; }
+        height: 100px; }
 }
     
 .note {
@@ -218,19 +217,22 @@ main {
 }
 
 .price {
-      display: flex;
-      flex-basis: 10%;
-      justify-self: center;
-      align-self: center;
-      margin-right: 20px;
-      margin-top: 30px;   }
+    display: flex;
+    flex-basis: 10%;
+    justify-self: center;
+    align-self: center;
+    margin-right: 20px;
+    margin-top: 30px;   }
 
 .fa-circle-check {
-      display: flex;
-      flex-basis: 15%;
-      font-size: 50px;
-      justify-self: center;
-      align-self: center;
+    display: flex;
+    flex-basis: 15%;
+    font-size: 50px;
+    justify-self: center;
+    align-self: center;
+    @media screen and (min-width:769px) {
+        font-size: 30px; }
+
 }
 
 button {        
@@ -238,37 +240,41 @@ button {
     margin-top: 50px;
     font-size: 32px;
     width: 50%;
-    margin-top: -20px;
+    margin-top: 20px;
     margin-bottom: 100px;
     @include mixins.button;  }
   
 
 /**
  * ----------------------------------------
- * animation slide-top
+ * animation fade-in-bottom
  * ----------------------------------------
  */
- @-webkit-keyframes slide-top {
+ @-webkit-keyframes fade-in-bottom {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
-  }
-}
-@keyframes slide-top {
-  0% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
+    opacity: 1;
   }
 }
-  
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 
 

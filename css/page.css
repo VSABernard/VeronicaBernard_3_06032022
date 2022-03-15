@@ -144,13 +144,12 @@ h2 {
   border-bottom: 4px solid #99E2D0;
   width: 100px;
   height: 55px;
-  margin-bottom: 70px;
 }
 @media screen and (min-width: 769px) {
   h2 {
     font-size: 26px;
     height: 40px;
-    margin-bottom: 90px;
+    width: 80px;
   }
 }
 
@@ -268,14 +267,15 @@ main {
 .menu {
   display: flex;
   flex-direction: column;
-  gap: 45px;
+  gap: 30px;
+  margin-bottom: 50px;
   margin-left: 20px;
 }
 @media screen and (min-width: 769px) {
   .menu {
     align-self: center;
-    width: 60%;
-    gap: 35px;
+    width: 50%;
+    gap: 20px;
   }
 }
 
@@ -289,13 +289,12 @@ main {
   background-color: white;
   box-shadow: 5px 5px 5px gainsboro;
   padding-left: 20px;
-  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) 0.44s both;
+  animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) 0.44s both;
 }
 @media screen and (min-width: 769px) {
   .container {
     height: 100px;
-    margin-bottom: -20px;
   }
 }
 
@@ -331,13 +330,18 @@ main {
   justify-self: center;
   align-self: center;
 }
+@media screen and (min-width: 769px) {
+  .fa-circle-check {
+    font-size: 30px;
+  }
+}
 
 button {
   align-self: center;
   margin-top: 50px;
   font-size: 32px;
   width: 50%;
-  margin-top: -20px;
+  margin-top: 20px;
   margin-bottom: 100px;
   position: relative;
   padding: 25px 40px;
@@ -352,27 +356,31 @@ button {
 
 /**
  * ----------------------------------------
- * animation slide-top
+ * animation fade-in-bottom
  * ----------------------------------------
  */
-@-webkit-keyframes slide-top {
+@-webkit-keyframes fade-in-bottom {
   0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
-@keyframes slide-top {
+@keyframes fade-in-bottom {
   0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
