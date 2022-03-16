@@ -264,6 +264,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
   margin: 40px 30px;
+  position: relative;
 }
 @media screen and (min-width: 769px) {
   .card_menu {
@@ -274,12 +275,11 @@ main {
 
 .fa-heart {
   font-size: 45px;
-  margin-top: 15px;
-  padding-right: 40px;
+  right: 75px;
 }
 @media screen and (min-width: 992px) {
   .fa-heart {
-    right: 90px;
+    right: 200px;
   }
 }
 

@@ -1,8 +1,7 @@
 @use '../utils/variables';
 
 @mixin shadow-block {
-    box-shadow: 5px 5px 5px gainsboro; 
-}
+    box-shadow: 5px 5px 5px gainsboro;  }
 
 @mixin button {
     position: relative;
@@ -13,8 +12,26 @@
     border: none;
     border-radius: 50px;
     cursor: pointer; 
-    @include shadow-block;
-}
+    @include shadow-block; }
 
-
+@mixin heart {
+    /* Commandes properties pour l'utilisation un pseudo-element - affichage tous les icons */
+    display: inline-block;                  
+    font-style: normal;                     
+    font-variant: normal;                   
+    text-rendering: auto;                   
+    -webkit-font-smoothing: antialiased;    
+    /* Commandes pour l'utilisation un pseudo-element - ref icon individuel */
+    font-family: "Font Awesome 5 Free"; 
+    font-size: 32px;
+    font-weight: 400; 
+    content: "\f004";                     /* unicode Font Awesome "fas heart" */
+    position: absolute;
+    cursor: pointer;
+    /* Commandes obligatoires pour l'utilisation "background-clip text" */
+    background-clip: text;                                  
+    -webkit-background-clip: text;
+    color: inherit;
+    opacity: 1;
+    transition: all 100ms ease-in-out;  }
 
