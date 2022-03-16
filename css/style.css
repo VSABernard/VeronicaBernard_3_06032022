@@ -168,7 +168,7 @@ header {
 @media screen and (min-width: 769px) {
   #function ol li {
     flex-basis: 43%;
-    max-width: 50%;
+    max-width: 40%;
     align-items: center;
     padding: 20px 5px 20px 40px;
     margin-left: 25px;
@@ -235,8 +235,12 @@ header {
     align-self: center;
     flex-wrap: wrap;
     height: auto;
-    width: 60%;
     margin: 20px 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .block_cards {
+    margin: 0px 80px;
   }
 }
 
@@ -244,18 +248,11 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 40px 30px 60px 5px;
+  margin: 0px 30px 60px 5px;
   height: 450px;
   width: 100%;
   border-radius: 30px;
   box-shadow: 5px 5px 5px gainsboro;
-}
-@media screen and (min-width: 768px) {
-  .card {
-    height: 450px;
-    width: 47%;
-    margin: 20px 10px;
-  }
 }
 .card img {
   width: 100%;
@@ -265,9 +262,28 @@ header {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
+@media screen and (min-width: 768px) {
+  .card img {
+    height: 250px;
+  }
+}
 .card:hover {
   cursor: pointer;
   transform: scale(1.05);
+}
+@media screen and (min-width: 768px) {
+  .card {
+    height: 350px;
+    width: 45%;
+    margin: 20px 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card {
+    height: 350px;
+    width: 45%;
+    margin: 20px;
+  }
 }
 
 /* Badge "Nouveau" */
@@ -290,12 +306,16 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 20px 20px;
+  position: relative;
+  margin: 0 10px 20px;
 }
 .card_infos name {
   margin-top: 10px;
 }
-@media screen and (min-width: 769px) {
+.card_infos h3 {
+  padding-top: 10px;
+}
+@media screen and (min-width: 768px) {
   .card_infos h3 {
     font-size: 28px;
   }
@@ -303,38 +323,53 @@ header {
 .card_infos p {
   font-size: 32px;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .card_infos p {
-    font-size: 26px;
+    font-size: 24px;
   }
+}
+.card_infos::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  /* unicode Font Awesome "heart" */
 }
 
 .fa-heart {
-  position: relative;
-  font-size: 32px;
+  position: absolute;
+  font-size: 34px;
   cursor: pointer;
+  right: 5px;
   margin-top: 20px;
-  margin-right: 20px;
-  color: inherit;
 }
 @media screen and (min-width: 769px) {
   .fa-heart {
-    margin-top: 5px;
-    margin-right: 5px;
+    margin-top: 15px;
+    right: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fa-heart {
+    right: 20px;
   }
 }
 
-/*transform: scale(0); */
-.fa-heart::before {
-  content: "";
-  border: black;
-}
-
-.fa-heart::after {
-  display: inline-block;
-  border: none;
+.fas {
+  color: transparent;
   background-image: linear-gradient(180deg, #9356DC, #FF79DA);
-  transition: color 0.3s ease;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.fas:hover {
+  opacity: 1;
+  transform: scale(1.3);
 }
 
 /* Footer */
@@ -375,6 +410,11 @@ footer h4 {
     align-items: center;
   }
 }
+@media screen and (min-width: 769px) {
+  .foot p {
+    font-size: 26px;
+  }
+}
 
 #proposition a, #partner a {
   display: flex;
@@ -386,6 +426,11 @@ footer h4 {
   width: 10px;
   margin-right: 40px;
   padding-top: 7px;
+}
+@media screen and (min-width: 769px) {
+  .fa-utensils, .fa-handshake-angle {
+    font-size: 26px;
+  }
 }
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */

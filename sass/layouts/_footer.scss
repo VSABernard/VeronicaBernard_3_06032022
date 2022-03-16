@@ -32,6 +32,11 @@ footer {
         
         @media screen and (min-width:769px) {
             align-items: center;  }
+
+    & p {
+        @media screen and (min-width:769px) {
+            font-size: 26px;  }
+    }
 }
 
  
@@ -44,4 +49,8 @@ footer {
     font-size: 32px;
     width: 10px;
     margin-right: 40px;
-    padding-top: 7px; }
+    padding-top: 7px; 
+
+    @media screen and (min-width:769px) {
+        font-size: 26px;  }
+}

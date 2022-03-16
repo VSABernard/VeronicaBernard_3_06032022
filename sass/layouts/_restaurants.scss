@@ -1,4 +1,4 @@
-@use '../utils/variables.scss';
+@use '../utils/variables';
 @use '../utils/mixins.scss';
 
 /* Restaurants */
@@ -13,10 +13,7 @@
     background-color: variables.$colour-background;  
 
     @media screen and (min-width:769px) {
-        padding-bottom: 50px;
-        
-    }
-
+        padding-bottom: 50px; }
 
     & h2 {
         margin-top: 100px;
@@ -26,8 +23,7 @@
         @media screen and (min-width:769px) {
             align-self: center;
             margin-top: 50px;
-            margin-bottom: 10px;
-        }
+            margin-bottom: 10px; }
     }
 }
 
@@ -48,26 +44,21 @@
         align-self: center;
         flex-wrap: wrap;
         height: auto;
-        width: 60%;
-        margin: 20px 10px;
-    }
+        margin: 20px 10px; }
+
+    @media screen and (min-width:992px){
+        margin: 0px 80px;}
 }
 
 .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 40px 30px 60px 5px;
+    margin: 0px 30px 60px 5px;
     height: 450px;
     width: 100%;
     border-radius: 30px; 
     @include mixins.shadow-block;  
-
-    @media screen and (min-width:768px){
-        height: 450px;
-        width: 47%;
-        margin: 20px 10px;
-    }
 
     & img {
         width: 100%;
@@ -75,12 +66,26 @@
         object-fit: cover;
         object-position: 50% 65%;
         border-top-left-radius: 30px;
-        border-top-right-radius: 30px; }
+        border-top-right-radius: 30px; 
+    
+        @media screen and (min-width:768px){
+            height: 250px;  }
+    }
     
     &:hover {
         cursor: pointer;
         transform: scale(1.05);
     }
+
+    @media screen and (min-width:768px){
+        height: 350px;
+        width: 45%;
+        margin: 20px 10px; }
+
+    @media screen and (min-width:992px){
+        height: 350px;
+        width: 45%; 
+        margin: 20px;}
 }
 
 /* Badge "Nouveau" */
@@ -104,20 +109,34 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 20px 20px;
+    position: relative;
+    margin: 0 10px 20px;
 
     & name {
         margin-top: 10px; }
 
     & h3 {
-        @media screen and (min-width:769px) {
+        padding-top: 10px;
+        
+        @media screen and (min-width:768px) {
             font-size: 28px;  }
     }
 
     & p {
         font-size: 32px;   
     
-        @media screen and (min-width:769px) {
-            font-size: 26px;   }
-    }    
+        @media screen and (min-width:768px) {
+            font-size: 24px;   }
+    }   
+    
+    &::before {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900; 
+        content: "\f004";                     /* unicode Font Awesome "heart" */
+    }
 }

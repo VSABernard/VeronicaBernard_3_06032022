@@ -1,30 +1,34 @@
 /* Variables SCSS */
 .fa-heart {
-  position: relative;
-  font-size: 32px;
+  position: absolute;
+  font-size: 34px;
   cursor: pointer;
+  right: 5px;
   margin-top: 20px;
-  margin-right: 20px;
-  color: inherit;
 }
 @media screen and (min-width: 769px) {
   .fa-heart {
-    margin-top: 5px;
-    margin-right: 5px;
+    margin-top: 15px;
+    right: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fa-heart {
+    right: 20px;
   }
 }
 
-/*transform: scale(0); */
-.fa-heart::before {
-  content: "";
-  border: black;
-}
-
-.fa-heart::after {
-  display: inline-block;
-  border: none;
+.fas {
+  color: transparent;
   background-image: linear-gradient(180deg, #9356DC, #FF79DA);
-  transition: color 0.3s ease;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.fas:hover {
+  opacity: 1;
+  transform: scale(1.3);
 }
 
 /* Footer */
@@ -65,6 +69,11 @@ footer h4 {
     align-items: center;
   }
 }
+@media screen and (min-width: 769px) {
+  .foot p {
+    font-size: 26px;
+  }
+}
 
 #proposition a, #partner a {
   display: flex;
@@ -76,6 +85,11 @@ footer h4 {
   width: 10px;
   margin-right: 40px;
   padding-top: 7px;
+}
+@media screen and (min-width: 769px) {
+  .fa-utensils, .fa-handshake-angle {
+    font-size: 26px;
+  }
 }
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
@@ -262,6 +276,11 @@ main {
   font-size: 45px;
   margin-top: 15px;
   padding-right: 40px;
+}
+@media screen and (min-width: 992px) {
+  .fa-heart {
+    right: 90px;
+  }
 }
 
 .menu {
