@@ -85,6 +85,7 @@ footer h4 {
   width: 10px;
   margin-right: 40px;
   padding-top: 7px;
+  color: inherit;
 }
 @media screen and (min-width: 769px) {
   .fa-utensils, .fa-handshake-angle {
@@ -153,43 +154,45 @@ h1 {
 }
 
 h2 {
-  font-size: 38px;
+  font-size: 34px;
   font-weight: 500;
   border-bottom: 4px solid #99E2D0;
   width: 100px;
   height: 55px;
+  margin-left: 10px;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   h2 {
     font-size: 26px;
     height: 40px;
-    width: 80px;
+    min-width: fit-content;
+    align-self: center;
   }
 }
 
 h3 {
-  font-size: 38px;
+  font-size: 32px;
   font-weight: 900;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   h3 {
     font-size: 26px;
   }
 }
 
 h4 {
-  font-size: 30px;
+  font-size: 28px;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   h4 {
     font-size: 22px;
   }
 }
 
 p {
-  font-size: 32px;
+  font-size: 30px;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   p {
     font-size: 22px;
   }
@@ -236,38 +239,40 @@ header {
 main {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
 }
 
-#restaurant_photo img {
+#banner img {
+  height: 40vh;
+  width: 100%;
   object-fit: cover;
+  object-position: center;
 }
-@media screen and (min-width: 769px) {
-  #restaurant_photo img {
-    height: 450px;
+@media screen and (min-width: 768px) {
+  #banner img {
+    height: 60vh;
     width: 100%;
-    object-position: 50% 70%;
   }
 }
 
 .main_menu {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  margin-top: -100px;
+  margin-top: -70px;
   background-color: #f6f6f6;
   border-top-left-radius: 80px;
   border-top-right-radius: 80px;
 }
 
-.card_menu {
+.page_menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 40px 30px;
   position: relative;
 }
-@media screen and (min-width: 769px) {
-  .card_menu {
+@media screen and (min-width: 768px) {
+  .page_menu {
     justify-content: center;
     gap: 60px;
   }
@@ -283,18 +288,33 @@ main {
   }
 }
 
+.block_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .block_menu {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+}
+
 .menu {
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin-bottom: 50px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 @media screen and (min-width: 769px) {
   .menu {
-    align-self: center;
-    width: 50%;
+    min-width: 30%;
     gap: 20px;
+    flex-basis: 45%;
   }
 }
 
@@ -302,16 +322,17 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-grow: 1;
   border-radius: 30px;
   height: 140px;
-  max-width: 97%;
+  width: 100%;
   background-color: white;
   box-shadow: 5px 5px 5px gainsboro;
   padding-left: 20px;
-  -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) 0.44s both;
-  animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) 0.44s both;
+  -webkit-animation: fade-in-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.44s both;
+  animation: fade-in-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) 0.44s both;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .container {
     height: 100px;
   }
@@ -321,21 +342,21 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-basis: 90%;
-  max-width: 80%;
-  min-width: 0;
+  width: 80%;
   margin-right: 10px;
+  overflow: hidden;
 }
 .note h3, .note h4 {
   white-space: nowrap;
   overflow: hidden;
+  max-width: 70%;
   text-overflow: ellipsis;
   direction: ltr;
 }
 
 .price {
   display: flex;
-  flex-basis: 10%;
+  flex: 1;
   justify-self: center;
   align-self: center;
   margin-right: 20px;
@@ -344,7 +365,7 @@ main {
 
 .fa-circle-check {
   display: flex;
-  flex-basis: 15%;
+  flex: 1;
   font-size: 50px;
   justify-self: center;
   align-self: center;
@@ -401,6 +422,12 @@ button {
     transform: translateY(0);
     opacity: 1;
   }
+}
+footer {
+  padding: 20px 0;
+}
+footer h4 {
+  margin: 0;
 }
 
 /*# sourceMappingURL=page.css.map */
