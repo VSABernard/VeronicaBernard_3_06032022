@@ -7,6 +7,7 @@
 @use './layouts/restaurants';
 @use './layouts/hearts';
 @use './layouts/footer';
+@use './components/loader';
 
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
@@ -105,13 +106,29 @@ a:active, a:hover, a:link, a:visited {
 //       transform: translateX(-6px) rotate(-1.2deg);
 //     }}
    
-
-
  
+  
+
+
+
+// @-webkit-keyframes spin {
+//     0% {
+//         -webkit-transform: rotate(0deg);
+//     }
+//     100% {
+//         -webkit-transform: rotate(360deg);
+//     }
+// }
+
+// @keyframes spin {
+//     0% {
+//         transform: rotate(0deg);
+//     }
+//     100% {
+//         transform: rotate(360deg);
+//     }
+// }
+
 
     
-
-
-
-
 

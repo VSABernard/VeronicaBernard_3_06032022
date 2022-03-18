@@ -76,8 +76,7 @@ h2 {
         font-size: 26px; 
         height: 40px;
         min-width: fit-content;
-        align-self: center;
-        }
+        align-self: center; }
 }
 
 h3 {
@@ -189,8 +188,7 @@ main {
          justify-content: center;
          flex-wrap: wrap;
          gap: 10px;
-         width: 100%;
-     }
+         width: 100%; }
 }
 
 .menu {
@@ -203,8 +201,7 @@ main {
     @media screen and (min-width:769px) {
       min-width: 30%;
       gap: 20px;
-      flex-basis: 45%;
-      }
+      flex-basis: 45%; }
 }
 
 .container {
@@ -222,9 +219,9 @@ main {
 	  animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.44s both; 
 
     @media screen and (min-width:768px) {
-        height: 100px;  
-        }
+        height: 100px;   }
 }
+
 .note {
     display: flex;
     flex-direction: column;
@@ -239,7 +236,7 @@ main {
         max-width: calc(70%);
         text-overflow: ellipsis;
         direction: ltr;   }
-      }
+}
 
 .price {
     display: flex;
