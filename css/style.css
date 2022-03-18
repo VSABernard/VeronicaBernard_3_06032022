@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Variables SCSS */
 /* Logo */
 header {
@@ -411,7 +412,7 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in;
 }
 .fas:hover {
   opacity: 1;
@@ -480,180 +481,84 @@ footer h4 {
   }
 }
 
-.loader {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  position: fixed;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  transform: scaleX(0);
-  background-color: white;
-  cursor: wait;
-  opacity: 1;
-  animation-duration: 2s;
-  pointer-events: none;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  -webkit-animation: bounce-out-right 0.5s 0.5s;
-  animation: bounce-out-right 0.5s 0.5s;
-  -webkit-animation-duration: 2s;
-}
-
-.spinner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  gap: 50px;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: white;
-  overflow: hidden;
-  opacity: 1;
-}
-.spinner h1 {
-  position: relative;
-  font-size: 60px;
-  background-image: transparent;
-  letter-spacing: 10px;
-  color: #FF79DA;
-}
-.spinner h1::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: auto;
-  width: 100%;
-  overflow: hidden;
-  color: #9356DC;
-  background-clip: text;
-  -webkit-background-clip: text;
-  line-height: 60px;
-}
-.spinner img {
-  height: 300px;
-  width: auto;
-  -webkit-animation: rotate-center 1.6s ease-in-out both;
-  animation: rotate-center 1.6s ease-in-out both;
-}
-
-/* Animation spinner bounce-out-right */
-@-webkit-keyframes bounce-out-right {
+/* Animation spinner slide-out-elliptic-right-fwd */
+@-webkit-keyframes slide-out-elliptic-right-fwd {
   0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+    -webkit-transform: translateX(0) rotateY(0) scale(1);
+    transform: translateX(0) rotateY(0) scale(1);
+    -webkit-transform-origin: 600px 50%;
+    transform-origin: 600px 50%;
+    opacity: 1;
   }
-  5% {
-    -webkit-transform: translateX(30px);
-    transform: translateX(30px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  15% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  25% {
-    -webkit-transform: translateX(38px);
-    transform: translateX(38px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  38% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  52% {
-    -webkit-transform: translateX(80px);
-    transform: translateX(80px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  65% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  85% {
+  50% {
+    -webkit-transform: translateX(0) rotateY(0) scale(1);
+    transform: translateX(0) rotateY(0) scale(1);
+    -webkit-transform-origin: 300px 50%;
+    transform-origin: 300px 50%;
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(1000px);
-    transform: translateX(1000px);
+    -webkit-transform: translateX(1000px) rotateY(20deg) scale(6);
+    transform: translateX(1000px) rotateY(20deg) scale(6);
+    -webkit-transform-origin: -100% 50%;
+    transform-origin: -100% 50%;
     opacity: 0;
   }
 }
-@keyframes bounce-out-right {
+@keyframes slide-out-elliptic-right-fwd {
   0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+    -webkit-transform: translateX(0) rotateY(0) scale(1);
+    transform: translateX(0) rotateY(0) scale(1);
+    -webkit-transform-origin: 600px 50%;
+    transform-origin: 600px 50%;
+    opacity: 1;
   }
-  5% {
-    -webkit-transform: translateX(30px);
-    transform: translateX(30px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  15% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  25% {
-    -webkit-transform: translateX(38px);
-    transform: translateX(38px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  38% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  52% {
-    -webkit-transform: translateX(80px);
-    transform: translateX(80px);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-  }
-  65% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-  85% {
+  50% {
+    -webkit-transform: translateX(0) rotateY(0) scale(1);
+    transform: translateX(0) rotateY(0) scale(1);
+    -webkit-transform-origin: 300px 50%;
+    transform-origin: 300px 50%;
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(1000px);
-    transform: translateX(1000px);
+    -webkit-transform: translateX(1000px) rotateY(20deg) scale(6);
+    transform: translateX(1000px) rotateY(20deg) scale(6);
+    -webkit-transform-origin: -100% 50%;
+    transform-origin: -100% 50%;
     opacity: 0;
+  }
+}
+/* Animation spinner scale-out-hor-right pour h1 */
+@-webkit-keyframes scale-out-hor-right {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+@keyframes scale-out-hor-right {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    opacity: 1;
   }
 }
 /* Animation rotate-center */
@@ -677,6 +582,63 @@ footer h4 {
     transform: rotate(360deg);
   }
 }
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+  background: white;
+  transform: scaleX(0);
+  cursor: wait;
+  opacity: 1;
+  animation-duration: 2.5s;
+  -webkit-animation-duration: 2.5s;
+  pointer-events: none;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  /* Spinner background blanc glisse vers le droit */
+  -webkit-animation: slide-out-elliptic-right-fwd 2.5s ease-in-out forwards;
+  animation: slide-out-elliptic-right-fwd 2.5s ease-in-out forwards;
+}
+
+.data_text {
+  position: relative;
+}
+.data_text h1 {
+  position: relative;
+  font-family: Shrikhand;
+  font-size: 80px;
+  background-image: transparent;
+  letter-spacing: 7px;
+  overflow: hidden;
+  line-height: 80px;
+  /* Remplir un texte avec un dégradé */
+  background: linear-gradient(120deg, #9356DC 0%, #FF79DA 50%, #99E2D0 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Animation text glisse vers le côté droit */
+  -webkit-animation: scale-out-hor-right 0.75s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-hor-right 0.75s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+.rocket img {
+  height: 600px;
+  width: auto;
+  /* Spinner rocket en rotation */
+  -webkit-animation: rotate-center 1s ease-in-out both;
+  animation: rotate-center 1s ease-in-out both;
+  animation-delay: 0.3s;
+}
+
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;

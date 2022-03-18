@@ -24,7 +24,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in;
 }
 .fas:hover {
   opacity: 1;
@@ -424,7 +424,7 @@ button {
   }
 }
 footer {
-  padding: 20px 0;
+  padding: 40px;
 }
 footer h4 {
   margin: 0;
