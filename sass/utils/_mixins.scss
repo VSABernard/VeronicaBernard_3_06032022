@@ -35,3 +35,11 @@
     opacity: 1;
     transition: all 100ms ease-in-out;  }
 
+@mixin slide-out-top {
+    -webkit-animation: slide-out-top 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) backwards;
+	animation: slide-out-top 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) backwards; }
+
+@mixin bounch-out-right {
+    -webkit-animation: bounce-out-right 2s forwards;
+	animation: bounce-out-right 2s forwards; }
+

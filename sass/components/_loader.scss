@@ -1,8 +1,10 @@
 @use '../utils/variables';
+@use '../utils/mixins';
 @use '../utils/keyframes';
 
 .loader {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -16,29 +18,38 @@
     z-index: 1;
     background: white;
     transform: scaleX(0);
-    cursor: wait;
+    cursor: wait;                   /* Définir la forme du curseur (rond en rotation) lorsque le pointeur est au-dessus de l'élément */
     opacity: 1;
-    animation-duration: 2.5s;
-    -webkit-animation-duration: 2.5s;
-    pointer-events: none;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    pointer-events: none;           /* Contrôler les circonstances dans lesquelles un élément graphique peut être une cible: des évènements de la souris, du pointeur ou du doigt */
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 
-    /* Spinner background blanc glisse vers le droit */
-    -webkit-animation: slide-out-elliptic-right-fwd 2.5s ease-in-out forwards;
-	animation: slide-out-elliptic-right-fwd 2.5s ease-in-out forwards;  }
+    /* Spinner background blanc glisse vers le haut */
+    @include mixins.slide-out-top; 
+
+    @media screen and (min-width:768px) {
+        flex-direction: row-reverse;  
+        
+        /* Spinner background blanc glisse vers le droit */
+        @include mixins.bounch-out-right; }
+}
 
 .data_text {
+    display: flex;
     position: relative;   
 
     & h1 {
         position: relative;
         font-family: Shrikhand;
-        font-size: 80px;
+        font-size: 50px;
         background-image: transparent;
-        letter-spacing: 7px;
         overflow: hidden;
         line-height: 80px;
+
+        /* Définir l'épaisseur et la couleur du contour utilisé pour les lettres d'un texte */
+        -webkit-text-stroke: 0.1px black;
 
         /* Remplir un texte avec un dégradé */
         background: linear-gradient(120deg,variables.$colour-primary 0%,variables.$colour-secondary 50%, variables.$colour-tertiary 100%);
@@ -46,19 +57,34 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;        
 
-        /* Animation text glisse vers le côté droit */
-        -webkit-animation: scale-out-hor-right 0.75s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-        animation: scale-out-hor-right 0.75s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; }
+        @media screen and (max-width:767px) {
+        /* Animation text glisse vers le haut */
+        @include mixins.slide-out-top; 
+        animation-duration: 3s; }
+        
+        @media screen and (min-width:768px) {
+            align-self: center;
+            font-size: 100px;
+            line-height: 100px;
+            word-spacing: 5px;
+            @include mixins.bounch-out-right; }
+    }
 } 
 
 .rocket img {
-    height: 600px;
+    display: flex;
+    height: 400px;
     width: auto;
         
     /* Spinner rocket en rotation */
-    -webkit-animation: rotate-center 1s ease-in-out both;
-	animation: rotate-center 1s ease-in-out both; 
-    animation-delay: 0.3s; }
+    -webkit-animation: rotate-center 0.5s ease-in-out both;
+	animation: rotate-center 0.5s ease-in-out both;
+
+    @media screen and (min-width:768px) {
+        height: 800px;
+        -webkit-animation: rotate-90-cw 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+	    animation: rotate-90-cw 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards; }    
+}
 
 
 

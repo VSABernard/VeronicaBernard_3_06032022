@@ -254,7 +254,6 @@ main {
     align-self: center;
     @media screen and (min-width:769px) {
         font-size: 30px; }
-
 }
 
 button {        
@@ -266,37 +265,6 @@ button {
     margin-bottom: 100px;
     @include mixins.button;  }
   
-
-/**
- * ----------------------------------------
- * animation fade-in-bottom
- * ----------------------------------------
- */
- @-webkit-keyframes fade-in-bottom {
-  0% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes fade-in-bottom {
-  0% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 
 footer {
     padding: 40px;
