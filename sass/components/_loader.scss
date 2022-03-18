@@ -13,7 +13,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    min-width: 100%;
+    width: 100%;
     min-height: 100vh;
     z-index: 1;
     background: white;
@@ -30,8 +30,9 @@
     @include mixins.slide-out-top; 
 
     @media screen and (min-width:768px) {
-        flex-direction: row-reverse;  
-        
+        flex-direction: row-reverse;
+        min-width: min-content;
+        margin-left: -30px;
         /* Spinner background blanc glisse vers le droit */
         @include mixins.bounch-out-right; }
 }
@@ -64,9 +65,9 @@
         
         @media screen and (min-width:768px) {
             align-self: center;
+            margin-left: 200px;
             font-size: 100px;
             line-height: 100px;
-            word-spacing: 5px;
             @include mixins.bounch-out-right; }
     }
 } 
@@ -82,8 +83,9 @@
 
     @media screen and (min-width:768px) {
         height: 800px;
-        -webkit-animation: rotate-90-cw 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
-	    animation: rotate-90-cw 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards; }    
+        padding-right: 120px;
+        -webkit-animation: rotate-270-cw 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+	    animation: rotate-270-cw 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards; }    
 }
 
 

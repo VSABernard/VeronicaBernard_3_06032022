@@ -163,7 +163,7 @@
 
 /* Animation rotate-90-cw pour spinner rocket (min-width:768px) */
 
-@-webkit-keyframes rotate-90-cw {
+@-webkit-keyframes rotate-270-cw {
       0% {
         -webkit-transform: rotate(0);
                 transform: rotate(0); }
@@ -172,7 +172,7 @@
                 transform: rotate(90deg); }
 }
 
-@keyframes rotate-90-cw {
+@keyframes rotate-270-cw {
       0% {
         -webkit-transform: rotate(0);
                 transform: rotate(0); }

@@ -658,7 +658,7 @@ footer h4 {
   }
 }
 /* Animation rotate-90-cw pour spinner rocket (min-width:768px) */
-@-webkit-keyframes rotate-90-cw {
+@-webkit-keyframes rotate-270-cw {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
@@ -668,7 +668,7 @@ footer h4 {
     transform: rotate(90deg);
   }
 }
-@keyframes rotate-90-cw {
+@keyframes rotate-270-cw {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
@@ -689,7 +689,7 @@ footer h4 {
   bottom: 0;
   left: 0;
   right: 0;
-  min-width: 100%;
+  width: 100%;
   min-height: 100vh;
   z-index: 1;
   background: white;
@@ -710,6 +710,8 @@ footer h4 {
 @media screen and (min-width: 768px) {
   .loader {
     flex-direction: row-reverse;
+    min-width: min-content;
+    margin-left: -30px;
     /* Spinner background blanc glisse vers le droit */
     -webkit-animation: bounce-out-right 2s forwards;
     animation: bounce-out-right 2s forwards;
@@ -746,9 +748,9 @@ footer h4 {
 @media screen and (min-width: 768px) {
   .data_text h1 {
     align-self: center;
+    margin-left: 200px;
     font-size: 100px;
     line-height: 100px;
-    word-spacing: 5px;
     -webkit-animation: bounce-out-right 2s forwards;
     animation: bounce-out-right 2s forwards;
   }
@@ -765,8 +767,9 @@ footer h4 {
 @media screen and (min-width: 768px) {
   .rocket img {
     height: 800px;
-    -webkit-animation: rotate-90-cw 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    animation: rotate-90-cw 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    padding-right: 120px;
+    -webkit-animation: rotate-270-cw 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation: rotate-270-cw 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
 }
 
