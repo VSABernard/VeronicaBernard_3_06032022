@@ -13,7 +13,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    min-width: 100%;
     min-height: 100vh;
     z-index: 1;
     background: white;
@@ -31,6 +31,7 @@
 
     @media screen and (min-width:768px) {
         flex-direction: row-reverse;
+        justify-content: center;
         min-width: min-content;
         margin-left: -30px;
         /* Spinner background blanc glisse vers le droit */
@@ -42,7 +43,7 @@
     position: relative;   
 
     & h1 {
-        position: relative;
+        display: flex;
         font-family: Shrikhand;
         font-size: 50px;
         background-image: transparent;
@@ -63,10 +64,9 @@
         @include mixins.slide-out-top; 
         animation-duration: 3s; }
         
-        @media screen and (min-width:768px) {
+        @media screen and (min-width:992px) {
             align-self: center;
-            margin-left: 200px;
-            font-size: 100px;
+            font-size: 80px;
             line-height: 100px;
             @include mixins.bounch-out-right; }
     }

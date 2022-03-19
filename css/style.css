@@ -689,7 +689,7 @@ footer h4 {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
+  min-width: 100%;
   min-height: 100vh;
   z-index: 1;
   background: white;
@@ -710,6 +710,7 @@ footer h4 {
 @media screen and (min-width: 768px) {
   .loader {
     flex-direction: row-reverse;
+    justify-content: center;
     min-width: min-content;
     margin-left: -30px;
     /* Spinner background blanc glisse vers le droit */
@@ -723,7 +724,7 @@ footer h4 {
   position: relative;
 }
 .data_text h1 {
-  position: relative;
+  display: flex;
   font-family: Shrikhand;
   font-size: 50px;
   background-image: transparent;
@@ -745,11 +746,10 @@ footer h4 {
     animation-duration: 3s;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .data_text h1 {
     align-self: center;
-    margin-left: 200px;
-    font-size: 100px;
+    font-size: 80px;
     line-height: 100px;
     -webkit-animation: bounce-out-right 2s forwards;
     animation: bounce-out-right 2s forwards;

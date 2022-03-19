@@ -1,6 +1,7 @@
 @use './utils/variables';
 @use './utils/mixins';
 @use './layouts/hearts';
+@use './layouts/menu';
 @use './layouts/footer';
 
 
@@ -53,6 +54,7 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
  
  html {
    min-width: fit-content;
+   min-height: 100vh;
  }
  
  /* Fonts */
@@ -80,20 +82,21 @@ h2 {
 }
 
 h3 {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 900; 
     @media screen and (min-width:768px) {
         font-size: 26px; }
 }
 
 h4 {
-    font-size: 28px; 
+    font-size: 26px; 
     @media screen and (min-width:768px) {
         font-size: 22px; }
 }
 
 p {
-    font-size: 30px; 
+    font-size: 26px; 
+    
     @media screen and (min-width:768px) {
         font-size: 22px; } 
 }
@@ -143,118 +146,13 @@ main {
     height: 40vh;
     width: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: bottom;
         
     @media screen and (min-width:768px) {
         height: 60vh;
         width: 100%; }
 }
 
-.main_menu {
-    display: flex;
-    flex-direction: column;
-    margin-top: -70px;
-    background-color: variables.$colour-background;
-    border-top-left-radius: 80px;
-    border-top-right-radius: 80px; }
-
-.page_menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 40px 30px;  
-    position: relative;
-
-    @media screen and (min-width:768px) {
-        justify-content: center;
-        gap: 60px; }
-}
-
-.fa-heart {
-    font-size: 45px;
-    right: 75px; 
-  
-    @media screen and (min-width:992px) {
-      right: 200px; }
-}
-
-.block_menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    @media screen and (min-width:768px) {
-         flex-direction: row;
-         justify-content: center;
-         flex-wrap: wrap;
-         gap: 10px;
-         width: 100%; }
-}
-
-.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-bottom: 50px;
-    margin-left: 10px;
-  
-    @media screen and (min-width:769px) {
-      min-width: 30%;
-      gap: 20px;
-      flex-basis: 45%; }
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-grow: 1;
-    border-radius: 30px;
-    height: 140px;
-    width: 100%;
-    background-color: white;
-    @include mixins.shadow-block;
-    padding-left: 20px; 
-    -webkit-animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.44s both;
-	  animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.44s both; 
-
-    @media screen and (min-width:768px) {
-        height: 100px;   }
-}
-
-.note {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
-    margin-right: 10px;     
-    overflow: hidden; 
-    
-    & h3, & h4 {
-        white-space: nowrap;
-        overflow: hidden;
-        max-width: calc(70%);
-        text-overflow: ellipsis;
-        direction: ltr;   }
-}
-
-.price {
-    display: flex;
-    flex: 1;
-    justify-self: center;
-    align-self: center;
-    margin-right: 20px;
-    margin-top: 30px;   }
-
-.fa-circle-check {
-    display: flex;
-    flex: 1;
-    font-size: 50px;
-    justify-self: center;
-    align-self: center;
-    @media screen and (min-width:769px) {
-        font-size: 30px; }
-}
 
 button {        
     align-self: center;
