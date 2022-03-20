@@ -58,7 +58,10 @@
 /* Animation rotate-center pour block price */
 @keyframes spin {
   0% {
-    transform: rotate(-270deg);
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-360deg);
   }
   100% {
     transform: rotate(0deg);
@@ -344,25 +347,57 @@
 }
 .menu > .container .price {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   flex: 1;
-  margin-bottom: 20px;
-  margin-right: 40px;
+  margin-bottom: 25px;
+  padding-right: 80px;
   align-items: flex-end;
+}
+@media screen and (min-width: 768px) {
+  .menu > .container .price {
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 945px) {
+  .menu > .container .price {
+    margin-right: 50px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .menu > .container .price {
+    margin-right: -20px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .menu > .container .price {
-    margin-right: 90px;
+    margin-right: 120px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .menu > .container .price {
+    margin-right: 100px;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .menu > .container .price {
+    margin-right: -100px;
+  }
+}
+@media screen and (min-width: 3200px) {
+  .menu > .container .price {
+    margin-right: 40px;
   }
 }
 .menu > .container .icon {
   display: flex;
   flex: 1;
+  justify-content: center;
   overflow: hidden;
+  position: relative;
   min-height: 100%;
   width: 100%;
   margin-right: -170px;
-  padding-left: 20px;
+  padding-right: 20px;
   background: #99E2D0;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -370,12 +405,39 @@
 }
 @media screen and (min-width: 768px) {
   .menu > .container .icon {
-    margin-right: -230px;
+    flex: 0.7;
+    padding-right: 20px;
+    margin-right: -200px;
+  }
+}
+@media screen and (min-width: 945px) {
+  .menu > .container .icon {
+    margin-right: -270px;
   }
 }
 @media screen and (min-width: 1024px) {
   .menu > .container .icon {
-    margin-right: -250px;
+    margin-right: -280px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu > .container .icon {
+    margin-right: -300px;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .menu > .container .icon {
+    margin-right: -360px;
+  }
+}
+@media screen and (min-width: 2900px) {
+  .menu > .container .icon {
+    margin-right: -400px;
+  }
+}
+@media screen and (min-width: 3200px) {
+  .menu > .container .icon {
+    margin-right: -600px;
   }
 }
 .menu > .container .icon .check {
@@ -388,6 +450,8 @@
   font-size: 40px;
   font-weight: 900;
   width: 100%;
+  justify-self: center;
+  align-self: center;
   margin-left: 20px;
   color: white;
 }
@@ -402,8 +466,8 @@
 .menu > .container:hover .icon {
   margin-right: 0;
 }
-.menu > .container:hover .icon span {
-  animation: spin 1s;
+.menu > .container:hover .icon .check {
+  animation: spin 0.7s linear;
 }
 
 /* Footer */
@@ -527,6 +591,8 @@ h1 {
   font-family: Shrikhand;
   font-size: 45px;
   font-weight: 500;
+  width: 80%;
+  overflow-wrap: break-word;
 }
 
 h2 {
@@ -619,7 +685,7 @@ main {
 }
 
 #banner img {
-  height: 40vh;
+  height: 50vh;
   width: 100%;
   object-fit: cover;
   object-position: 50% 70%;
