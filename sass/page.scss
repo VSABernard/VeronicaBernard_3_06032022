@@ -64,7 +64,7 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
 
 h1 {
     font-family: Shrikhand;
-    font-size: 52px;
+    font-size: 45px;
     font-weight: 500; }
 
 h2 {
@@ -134,7 +134,7 @@ header {
     flex: 3; 
 
     & img {
-         height: 60px;}
+         height: 50px;}
   }
 
 main {
@@ -146,12 +146,7 @@ main {
     height: 40vh;
     width: 100%;
     object-fit: cover;
-    object-position: bottom;
-        
-    @media screen and (min-width:768px) {
-        height: 60vh;
-        width: 100%; }
-}
+    object-position: 50% 70%; }
 
 
 button {        

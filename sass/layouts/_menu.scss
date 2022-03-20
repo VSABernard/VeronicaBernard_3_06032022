@@ -20,20 +20,21 @@
     @media screen and (min-width:768px) {
         justify-content: center;
         gap: 60px; }
+
+    & > h1 {
+        overflow-wrap: break-word;
+    }
 }
 
 .fa-heart {
     font-size: 45px;
-    right: 75px; 
+    right: 15px; 
   
     @media screen and (min-width:992px) {
       right: 200px; }
 }
 
 .block_menu {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-
     @media screen and (min-width:1024px) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -47,7 +48,7 @@
     margin-bottom: 50px;
     margin-left: 10px;
     padding-right: 20px;
-  
+
     @media screen and (min-width:769px) {
       min-width: 30%;
       gap: 20px;
@@ -67,6 +68,9 @@
         padding-left: 20px; 
         overflow: hidden;
 
+        -webkit-animation: slide-in-bottom 2s both;
+	        animation: slide-in-bottom 2s both;
+
         @media screen and (min-width:768px) {
             height: 100px;   }
     
@@ -75,7 +79,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            flex: 6;
+            flex: 4;
             width: 80%;   
             overflow: hidden; 
             
@@ -86,54 +90,79 @@
                 text-overflow: ellipsis;
                 direction: ltr;   }
             
-            @media screen and (min-width:768px) {
+            @media screen and (min-width:992px) {
+                flex: 3;
                 width: 70%;
+            }
+            @media screen and (min-width:1024px) {
+                flex: 2;
             }
         }
 
         .price {
             display: flex;
-            flex: 0.5;
-            margin: 20px;
-            align-items: flex-end;}
+            justify-content: center;
+            flex: 1;
+            margin-bottom: 20px;
+            margin-right: 40px;
+            align-items: flex-end; 
+        
+            @media screen and (min-width:1024px) {
+                margin-right: 90px;;
+            }
+            }
 
         .icon {
             display: flex;
-            flex: 1.2;
+            flex: 1;
             overflow: hidden;
             min-height: 100%;
             width: 100%;
-            margin-right: -150px;
+            margin-right: -170px;
             padding-left: 20px;
             background: variables.$colour-tertiary;
             border-top-right-radius: 30px;
             border-bottom-right-radius: 30px; 
-            transition: margin-right 0.7s;
+            transition: margin-right 1s;
 
-            .fa-circle-check {
-                font-size: 40px;
-                font-weight: 900;
+            @media screen and (min-width:768px) {
+                margin-right: -230px;
+            }
+            @media screen and (min-width:1024px) {
+                margin-right: -250px;
+            }
+
+            & .check {
+                background: variables.$colour-tertiary;
                 justify-self: center;
                 align-self: center;
                 position: absolute;
-                width: 100%;
-                margin-left: 20px;
-                color: white;                
             
-                @media screen and (min-width:768px) {
-                    font-size: 30px; }
+                .fa-circle-check {
+                    font-size: 40px;
+                    font-weight: 900;
+                    
+                    width: 100%;
+                    margin-left: 20px;
+                    color: white;                
+                    
+                    @media screen and (min-width:768px) {
+                        font-size: 30px; }
+                }
             }
         }
-    &:hover {
-        cursor: pointer;  
 
-        .icon {
-            margin-right: 0; }
-        
-        .fa-circle-check {
-            -webkit-animation: rotate-center 5s ease-in-out reverse both;
-	        animation: rotate-center 5s ease-in-out reverse both;        }
-        }  
-    
-    }
-}   
+        &:hover {
+            cursor: pointer;  
+
+            .icon {
+                margin-right: 0; 
+            
+                span  {
+                animation: spin 1s ; }
+            }
+        }
+    }   
+}
+
+

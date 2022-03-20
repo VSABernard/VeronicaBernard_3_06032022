@@ -1,69 +1,45 @@
-/* Animation fade-in-bottom pour les ligne des menus */
+/* Animation slide-in-bottom pour les ligne des menus */
 
-@keyframes fadein {
-        from {
-            opacity:0;
-        }
-        to {
-            opacity:1;
-        }
-    }
-    @-moz-keyframes fadein { /* sur Firefox */
-        from {
-            opacity:0;
-        }
-        to {
-            opacity:1;
-        }
-    }
-    @-webkit-keyframes fadein { /* sur Safari et Chrome */
-        from {
-            opacity:0;
-        }
-        to {
-            opacity:1;
-        }
-    }
-    @-o-keyframes fadein { /* sur Opera */
-        from {
-            opacity:0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
+@-webkit-keyframes slide-in-bottom {
+     0% {
+       -webkit-transform: translateY(50px);
+               transform: translateY(50px);
+       opacity: 0; }
 
+     100% {
+       -webkit-transform: translateY(0);
+               transform: translateY(0);
+       opacity: 1; }
+}
+
+@keyframes slide-in-bottom {
+     0% {
+       -webkit-transform: translateY(50px);
+               transform: translateY(50px);
+       opacity: 0; }
+     100% {
+       -webkit-transform: translateY(0);
+               transform: translateY(0);
+       opacity: 1; }
+}
 
 
 /* Animation rotate-center pour block price */
  
-@-webkit-keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
+@keyframes spin {
+         0% {
+        //    opacity: 0;
+           transform: rotate(-270deg);
+         }
+      
+         100% {
+        //    opacity: 1;
+           transform: rotate(0deg);
+         }
+       }
 
 
-
-
-
-
-
+/* -------------- ANIMATIONS POUR LE SPINNER --------------- */
 
 
 /* Animation spinner slide-out-top */
