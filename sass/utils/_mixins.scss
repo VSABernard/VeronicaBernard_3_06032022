@@ -33,7 +33,7 @@
     -webkit-background-clip: text;
     color: inherit;
     opacity: 1;
-    transition: all 100ms ease-in-out;  }
+    transition: all 1000ms ease-in;  }
 
 @mixin slide-out-top {
     -webkit-animation: slide-out-top 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) backwards;

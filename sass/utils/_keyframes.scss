@@ -1,27 +1,70 @@
 /* Animation fade-in-bottom pour les ligne des menus */
 
- @-webkit-keyframes fade-in-bottom {
-       0% {
-        -webkit-transform: translateY(50px);
-                transform: translateY(50px);
-        opacity: 0; }
-      100% {
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
-        opacity: 1; }
+@keyframes fadein {
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-moz-keyframes fadein { /* sur Firefox */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-webkit-keyframes fadein { /* sur Safari et Chrome */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-o-keyframes fadein { /* sur Opera */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+
+
+/* Animation rotate-center pour block price */
+ 
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
-@keyframes fade-in-bottom {
-      0% {
-        -webkit-transform: translateY(50px);
-                transform: translateY(50px);
-        opacity: 0; }
-      100% {
-        -webkit-transform: translateY(0);
-                transform: translateY(0);
-        opacity: 1; }
-}
-  
+
+
+
+
+
+
+
 
 /* Animation spinner slide-out-top */
 
