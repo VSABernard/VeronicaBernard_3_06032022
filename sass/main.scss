@@ -56,7 +56,11 @@ html, body
     
 h1 {
     font-size: 40px;
-    font-weight: 900; }
+    font-weight: 900; 
+
+    @media screen and (max-width:500px) {
+        font-size: 34px;  }
+}
 
 h2 {
     font-size: 36px;
