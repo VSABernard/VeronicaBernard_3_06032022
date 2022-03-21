@@ -23,14 +23,15 @@
         font-weight: 300;
         margin: 0px 20px;   }
 
-    & button {        
+    & .button {        
         margin-top: 45px;
         margin-bottom: 80px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         font-size: 32px;
-        @include mixins.button;  
-        }
-    & button:hover {
+        @include mixins.button;  }
+
+    & .button:hover {
         transform: scale(1.05);
-        opacity: 0.9;
-    }
+        opacity: 0.9; }
 }
