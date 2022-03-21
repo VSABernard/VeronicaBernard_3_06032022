@@ -482,9 +482,11 @@ footer {
   justify-content: space-around;
   background: #353535;
   color: white;
+  height: auto;
   padding-top: 30px;
   padding-left: 40px;
   padding-bottom: 80px;
+  overflow: hidden;
 }
 footer h4 {
   font-family: "Shrikhand";
@@ -584,7 +586,12 @@ td, th {
 
 html {
   overflow-x: hidden;
+  overflow-y: hidden;
   min-height: 100vh;
+}
+
+body {
+  max-height: 100vh;
 }
 
 /* Fonts */

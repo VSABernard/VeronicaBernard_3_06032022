@@ -51,10 +51,13 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
  
  html {
    overflow-x: hidden;
+   overflow-y: hidden;
    min-height: 100vh;
  }
 
-
+body {
+   max-height: 100vh;
+}
 
  /* Fonts */
 * {

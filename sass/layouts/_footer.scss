@@ -6,9 +6,11 @@ footer {
     justify-content: space-around;
     background: #353535;
     color: white;   
+    height: auto;
     padding-top: 30px;
     padding-left: 40px;
-    padding-bottom: 80px;   
+    padding-bottom: 80px; 
+    overflow: hidden;  
 
     & h4 {
         font-family: "Shrikhand";

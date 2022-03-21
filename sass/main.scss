@@ -45,6 +45,10 @@ td,th {
 html {
     min-width: fit-content; }
 
+body {
+    max-height: 100vh;
+}
+
 html, body 
     {   overflow-x: hidden;
         margin: 0px; }
