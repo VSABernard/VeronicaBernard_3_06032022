@@ -10,7 +10,6 @@ footer {
     padding-top: 30px;
     padding-left: 40px;
     padding-bottom: 80px; 
-    overflow: hidden;  
 
     & h4 {
         font-family: "Shrikhand";
@@ -21,23 +20,27 @@ footer {
     
     @media screen and (min-width:769px) {
         align-items: center;  }
+
+    @media screen and (max-width:390px) {
+        padding: 20px;  }
 }
 
 .foot {
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
 
     & li {
-        font-size: 32px;
+        font-size: 24px;
         padding-top: 20px;
-        margin-left: 20px;  }
+        margin-left: 10px;  }
         
         @media screen and (min-width:769px) {
             align-items: center;  }
 
     & p {
         @media screen and (min-width:769px) {
-            font-size: 26px;  }
+            font-size: 24px;  }
     }
 }
 
@@ -48,12 +51,14 @@ footer {
     flex-direction: row; }
 
 .fa-utensils, .fa-handshake-angle {
-    font-size: 32px;
+    font-size: 30px;
     width: 10px;
     margin-right: 40px;
-    padding-top: 7px; 
     color: inherit;
 
     @media screen and (min-width:769px) {
         font-size: 26px;  }
+
+    @media screen and (max-width:450px) {
+        font-size: 22px;  }
 }

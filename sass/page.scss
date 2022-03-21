@@ -76,7 +76,8 @@ h1 {
       margin-right: 20px; }
     
     @media screen and (max-width:400px) {
-      font-size: 32px; }    }
+      font-size: 32px;
+      width: 60%; }    }
 
 h2 {
     font-size: 30px;
@@ -169,6 +170,9 @@ button {
   
 footer {
     padding: 40px;
+
+    @media screen and (max-width:360px) {
+      padding: 10px;  }
 
     & h4 {
       margin: 0;     }

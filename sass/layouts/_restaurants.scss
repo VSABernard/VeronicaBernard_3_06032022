@@ -117,7 +117,7 @@
     flex-direction: row;
     justify-content: space-between;
     position: relative;
-    margin: 0 10px 20px;
+    margin: 0 15px 20px 20px;
 
     & name {
         margin-top: 10px; }
@@ -128,13 +128,13 @@
         &::before {
             @include mixins.heart; 
             top: 20px;
-            right: 15px;}
+            right: 10px;}
     
         &::after {
             @include mixins.heart;
             font-weight: 900;
             top: 20px;
-            right: 15px;
+            right: 10px;
             background-image: linear-gradient(180deg, variables.$colour-primary, variables.$colour-secondary);
             opacity: 0;
             color: transparent; }
@@ -147,8 +147,11 @@
         @media screen and (min-width:768px) {
             font-size: 28px;  }
 
-        @media screen and (max-width:420px) {
-            font-size: 22px;  }
+        @media screen and (max-width:450px) {
+            font-size: 26px;  }
+
+         @media screen and (max-width:395px) {
+            font-size: 23px;  }   
     }
 
     & p {
@@ -157,7 +160,7 @@
         @media screen and (min-width:768px) {
             font-size: 24px;   }
 
-        @media screen and (max-width:420px) {
-            font-size: 18px;  }
+        @media screen and (max-width:450px) {
+            font-size: 22px;  }
     }   
 }

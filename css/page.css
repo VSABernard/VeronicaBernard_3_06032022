@@ -491,7 +491,6 @@ footer {
   padding-top: 30px;
   padding-left: 40px;
   padding-bottom: 80px;
-  overflow: hidden;
 }
 footer h4 {
   font-family: "Shrikhand";
@@ -505,15 +504,21 @@ footer h4 {
     align-items: center;
   }
 }
+@media screen and (max-width: 390px) {
+  footer {
+    padding: 20px;
+  }
+}
 
 .foot {
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
 }
 .foot li {
-  font-size: 32px;
+  font-size: 24px;
   padding-top: 20px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 @media screen and (min-width: 769px) {
   .foot {
@@ -522,7 +527,7 @@ footer h4 {
 }
 @media screen and (min-width: 769px) {
   .foot p {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
@@ -532,15 +537,19 @@ footer h4 {
 }
 
 .fa-utensils, .fa-handshake-angle {
-  font-size: 32px;
+  font-size: 30px;
   width: 10px;
   margin-right: 40px;
-  padding-top: 7px;
   color: inherit;
 }
 @media screen and (min-width: 769px) {
   .fa-utensils, .fa-handshake-angle {
     font-size: 26px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .fa-utensils, .fa-handshake-angle {
+    font-size: 22px;
   }
 }
 
@@ -609,8 +618,8 @@ h1 {
   font-weight: 500;
   width: 80%;
   overflow-wrap: break-word;
-  margin-left: 10px; }
-  
+  margin-left: 10px;
+}
 @media screen and (max-width: 525px) {
   h1 {
     font-size: 36px;
@@ -620,6 +629,7 @@ h1 {
 @media screen and (max-width: 400px) {
   h1 {
     font-size: 32px;
+    width: 60%;
   }
 }
 
@@ -733,10 +743,16 @@ button {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 5px 5px 5px gainsboro; }
+  box-shadow: 5px 5px 5px gainsboro;
+}
 
 footer {
   padding: 40px;
+}
+@media screen and (max-width: 360px) {
+  footer {
+    padding: 10px;
+  }
 }
 footer h4 {
   margin: 0;
