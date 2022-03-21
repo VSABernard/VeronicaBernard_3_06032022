@@ -45,29 +45,32 @@ td,th {
 html {
     min-width: fit-content; }
 
+html, body 
+    {   overflow-x: hidden;
+        margin: 0px; }
+
 /* Fonts */
 
 * {
     font-family: "Roboto", "Comic Sans MS"; }
     
 h1 {
-    font-size: 46px;
+    font-size: 40px;
     font-weight: 900; }
 
 h2 {
-    font-size: 44px;
+    font-size: 36px;
     font-weight: 900; }
 
 h3 {
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 900;  }
 
 h4 {
-    font-size: 30px; }
+    font-size: 26px; }
 
 p {
-    font-size: 32px; }
-
+    font-size: 26px; }
 
 a {
     text-decoration: none;
@@ -78,57 +81,4 @@ a:active, a:hover, a:link, a:visited {
     text-decoration: none;
     color: inherit; }
 
-
-
-//  * ----------------------------------------
-//  * animation wobble-hor-bottom
-//  * ----------------------------------------
- 
-//  @keyframes wobble-hor-bottom {
-//     0%,
-//     100% {
-//       transform: translateX(0%);
-//       transform-origin: 50% 50%;
-//     }
-//     15% {
-//       transform: translateX(-30px) rotate(-6deg);
-//     }
-//     30% {
-//       transform: translateX(15px) rotate(6deg);
-//     }
-//     45% {
-//       transform: translateX(-15px) rotate(-3.6deg);
-//     }
-//     60% {
-//       transform: translateX(9px) rotate(2.4deg);
-//     }
-//     75% {
-//       transform: translateX(-6px) rotate(-1.2deg);
-//     }}
-   
- 
-  
-
-
-
-// @-webkit-keyframes spin {
-//     0% {
-//         -webkit-transform: rotate(0deg);
-//     }
-//     100% {
-//         -webkit-transform: rotate(360deg);
-//     }
-// }
-
-// @keyframes spin {
-//     0% {
-//         transform: rotate(0deg);
-//     }
-//     100% {
-//         transform: rotate(360deg);
-//     }
-// }
-
-
-    
 

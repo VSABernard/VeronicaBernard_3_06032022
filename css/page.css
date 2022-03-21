@@ -5,9 +5,9 @@
   cursor: pointer;
   right: 5px;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .fa-heart {
-    margin-top: 15px;
+    margin-top: 0px;
     right: 0;
   }
 }
@@ -255,6 +255,7 @@
   justify-content: space-between;
   margin: 40px 30px;
   position: relative;
+  height: 60px;
 }
 @media screen and (min-width: 768px) {
   .page_menu {
@@ -276,6 +277,10 @@
   }
 }
 
+.block_menu {
+  margin-left: 20px;
+  padding-right: 30px;
+}
 @media screen and (min-width: 1024px) {
   .block_menu {
     display: grid;
@@ -350,7 +355,7 @@
   justify-content: flex-end;
   flex: 1;
   margin-bottom: 25px;
-  padding-right: 80px;
+  padding-right: 100px;
   align-items: flex-end;
 }
 @media screen and (min-width: 768px) {
@@ -365,7 +370,7 @@
 }
 @media screen and (min-width: 1000px) {
   .menu > .container .price {
-    margin-right: -20px;
+    margin-right: 20px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -483,7 +488,7 @@ footer {
 }
 footer h4 {
   font-family: "Shrikhand";
-  font-size: 40px;
+  font-size: 36px;
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 20px;
@@ -582,6 +587,11 @@ html {
   min-height: 100vh;
 }
 
+html, body {
+  overflow-x: hidden;
+  margin: 0px;
+}
+
 /* Fonts */
 * {
   font-family: "Roboto", "Comic Sans MS";
@@ -589,14 +599,15 @@ html {
 
 h1 {
   font-family: Shrikhand;
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 500;
   width: 80%;
   overflow-wrap: break-word;
+  margin-left: 10px;
 }
 
 h2 {
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 500;
   border-bottom: 4px solid #99E2D0;
   width: 100px;
@@ -613,7 +624,7 @@ h2 {
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 900;
 }
 @media screen and (min-width: 768px) {
@@ -623,7 +634,7 @@ h3 {
 }
 
 h4 {
-  font-size: 26px;
+  font-size: 24px;
 }
 @media screen and (min-width: 768px) {
   h4 {
@@ -632,7 +643,7 @@ h4 {
 }
 
 p {
-  font-size: 26px;
+  font-size: 24px;
 }
 @media screen and (min-width: 768px) {
   p {
