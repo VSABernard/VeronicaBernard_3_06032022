@@ -50,13 +50,10 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
  }
  
  html {
-   min-width: fit-content;
+   overflow-x: hidden;
    min-height: 100vh;
  }
 
-html, body 
- {   overflow-x: hidden;
-     margin: 0px; }
 
 
  /* Fonts */
@@ -148,7 +145,7 @@ main {
     max-width: 100%;}
 
 #banner img  {
-    height: 50vh;
+    height: 20vh;
     width: 100%;
     object-fit: cover;
     object-position: 50% 70%; }
