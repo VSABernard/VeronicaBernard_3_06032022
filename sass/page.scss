@@ -51,12 +51,11 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
  
  html {
    overflow-x: hidden;
-   overflow-y: hidden;
    min-height: 100vh;
  }
 
 body {
-   max-height: 100vh;
+   min-height: 100vh;
 }
 
  /* Fonts */
@@ -70,7 +69,14 @@ h1 {
     font-weight: 500; 
     width: 80%;
     overflow-wrap: break-word;
-    margin-left: 10px;}
+    margin-left: 10px; 
+  
+    @media screen and (max-width:525px) {
+      font-size: 36px;
+      margin-right: 20px; }
+    
+    @media screen and (max-width:400px) {
+      font-size: 32px; }    }
 
 h2 {
     font-size: 30px;
@@ -139,7 +145,7 @@ header {
     flex: 3; 
 
     & img {
-         height: 50px;}
+         height: 40px;}
   }
 
 main {
@@ -148,7 +154,7 @@ main {
     max-width: 100%;}
 
 #banner img  {
-    height: 20vh;
+    height: 25vh;
     width: 100%;
     object-fit: cover;
     object-position: 50% 70%; }
@@ -157,10 +163,9 @@ button {
     align-self: center;
     margin-top: 50px;
     font-size: 32px;
-    width: 50%;
     margin-top: 20px;
     margin-bottom: 100px;
-    @include mixins.button;  }
+    @include mixins.button; }
   
 footer {
     padding: 40px;

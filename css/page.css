@@ -358,6 +358,11 @@
   padding-right: 100px;
   align-items: flex-end;
 }
+@media screen and (max-width: 370px) {
+  .menu > .container .price {
+    margin-right: 20px;
+  }
+}
 @media screen and (min-width: 768px) {
   .menu > .container .price {
     margin-right: 0px;
@@ -586,12 +591,11 @@ td, th {
 
 html {
   overflow-x: hidden;
-  overflow-y: hidden;
   min-height: 100vh;
 }
 
 body {
-  max-height: 100vh;
+  min-height: 100vh;
 }
 
 /* Fonts */
@@ -605,7 +609,18 @@ h1 {
   font-weight: 500;
   width: 80%;
   overflow-wrap: break-word;
-  margin-left: 10px;
+  margin-left: 10px; }
+  
+@media screen and (max-width: 525px) {
+  h1 {
+    font-size: 36px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 32px;
+  }
 }
 
 h2 {
@@ -688,7 +703,7 @@ header {
   flex: 3;
 }
 .logo img {
-  height: 50px;
+  height: 40px;
 }
 
 main {
@@ -698,7 +713,7 @@ main {
 }
 
 #banner img {
-  height: 20vh;
+  height: 25vh;
   width: 100%;
   object-fit: cover;
   object-position: 50% 70%;
@@ -708,7 +723,6 @@ button {
   align-self: center;
   margin-top: 50px;
   font-size: 32px;
-  width: 50%;
   margin-top: 20px;
   margin-bottom: 100px;
   position: relative;
@@ -719,8 +733,7 @@ button {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 5px 5px 5px gainsboro;
-}
+  box-shadow: 5px 5px 5px gainsboro; }
 
 footer {
   padding: 40px;
