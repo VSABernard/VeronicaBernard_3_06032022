@@ -46,12 +46,12 @@ html {
     min-width: fit-content; }
 
 body {
-    max-height: 100vh;
+    min-height: 100vh;
 }
 
-html, body 
-    {   overflow-x: hidden;
-        margin: 0px; }
+// html, body 
+//     {   overflow-x: hidden;
+//         margin: 0px; }
 
 /* Fonts */
 

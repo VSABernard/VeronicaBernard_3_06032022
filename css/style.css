@@ -314,7 +314,7 @@ header {
 }
 @media screen and (max-width: 420px) {
   .card img {
-    height: 250px;
+    height: 230px;
   }
 }
 .card:hover {
@@ -909,12 +909,7 @@ html {
 }
 
 body {
-  max-height: 100vh;
-}
-
-html, body {
-  overflow-x: hidden;
-  margin: 0px;
+  min-height: 100vh;
 }
 
 /* Fonts */
