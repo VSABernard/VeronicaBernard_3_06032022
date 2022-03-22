@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Variables SCSS */
 .fa-heart {
   position: absolute;
@@ -21,6 +22,7 @@
   color: transparent;
   background-image: linear-gradient(180deg, #9356DC, #FF79DA);
   background-clip: text;
+  /* définit la façon dont l'arrière-plan d'un élément s'étend sous la boîte de bordure, la boîte de remplissage ou la boîte de contenu.*/
   -webkit-background-clip: text;
   opacity: 0;
   transition: all 1000ms ease-in;
@@ -294,8 +296,7 @@
   flex-direction: column;
   gap: 20px;
   margin-bottom: 50px;
-  margin-left: 10px;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 @media screen and (min-width: 769px) {
   .menu {
@@ -309,7 +310,7 @@
   flex-direction: row;
   justify-content: space-between;
   border-radius: 30px;
-  height: 120px;
+  height: 110px;
   min-width: 100%;
   background-color: white;
   box-shadow: 5px 5px 5px gainsboro;
@@ -324,6 +325,11 @@
     height: 100px;
   }
 }
+@media screen and (max-width: 600px) {
+  .menu > .container {
+    height: 90px;
+  }
+}
 .menu > .container .note {
   display: flex;
   flex-direction: column;
@@ -331,6 +337,7 @@
   flex: 4;
   width: 80%;
   overflow: hidden;
+  padding-right: 20px;
 }
 .menu > .container .note h3, .menu > .container .note h4 {
   white-space: nowrap;
@@ -338,6 +345,11 @@
   max-width: 100%;
   text-overflow: ellipsis;
   direction: ltr;
+}
+@media screen and (max-width: 500px) {
+  .menu > .container .note {
+    flex: 1.2;
+  }
 }
 @media screen and (min-width: 992px) {
   .menu > .container .note {
@@ -347,107 +359,85 @@
 }
 @media screen and (min-width: 1024px) {
   .menu > .container .note {
-    flex: 2;
+    flex: 1;
   }
 }
 .menu > .container .price {
   display: flex;
   justify-content: flex-end;
-  flex: 1;
+  flex: 0.25;
   margin-bottom: 25px;
-  padding-right: 100px;
+  margin-right: 60px;
   align-items: flex-end;
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 320px) {
   .menu > .container .price {
-    margin-right: 20px;
+    margin-right: 80px;
   }
 }
-@media screen and (min-width: 768px) {
-  .menu > .container .price {
-    margin-right: 0px;
-  }
-}
-@media screen and (min-width: 945px) {
-  .menu > .container .price {
-    margin-right: 50px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .menu > .container .price {
-    margin-right: 20px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .menu > .container .price {
-    margin-right: 120px;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .menu > .container .price {
-    margin-right: 100px;
-  }
-}
-@media screen and (min-width: 2560px) {
-  .menu > .container .price {
-    margin-right: -100px;
-  }
-}
-@media screen and (min-width: 3200px) {
+@media screen and (max-width: 500px) {
   .menu > .container .price {
     margin-right: 40px;
   }
 }
+@media screen and (max-width: 600px) {
+  .menu > .container .price {
+    margin-right: 80px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu > .container .price {
+    margin-right: 60px;
+  }
+}
 .menu > .container .icon {
   display: flex;
-  flex: 1;
+  flex: 0.7;
   justify-content: center;
   overflow: hidden;
   position: relative;
   min-height: 100%;
   width: 100%;
-  margin-right: -170px;
+  margin-right: -160px;
   padding-right: 20px;
   background: #99E2D0;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   transition: margin-right 1s;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 500px) {
   .menu > .container .icon {
-    flex: 0.7;
-    padding-right: 20px;
     margin-right: -200px;
   }
 }
-@media screen and (min-width: 945px) {
+@media screen and (min-width: 1000px) {
   .menu > .container .icon {
-    margin-right: -270px;
+    margin-right: -220px;
   }
 }
 @media screen and (min-width: 1024px) {
   .menu > .container .icon {
-    margin-right: -280px;
+    margin-right: -220px;
   }
 }
 @media screen and (min-width: 1440px) {
   .menu > .container .icon {
-    margin-right: -300px;
+    margin-right: -280px;
   }
 }
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 1700px) {
   .menu > .container .icon {
-    margin-right: -360px;
+    margin-right: -350px;
   }
 }
-@media screen and (min-width: 2900px) {
+@media screen and (min-width: 2000px) {
   .menu > .container .icon {
     margin-right: -400px;
   }
 }
-@media screen and (min-width: 3200px) {
+@media screen and (min-width: 2460px) {
   .menu > .container .icon {
-    margin-right: -600px;
+    margin-right: -500px;
   }
 }
 .menu > .container .icon .check {
@@ -464,11 +454,6 @@
   align-self: center;
   margin-left: 20px;
   color: white;
-}
-@media screen and (min-width: 768px) {
-  .menu > .container .icon .check .fa-circle-check {
-    font-size: 30px;
-  }
 }
 .menu > .container:hover {
   cursor: pointer;
@@ -627,18 +612,23 @@ h1 {
 }
 @media screen and (max-width: 400px) {
   h1 {
-    font-size: 32px;
+    font-size: 28px;
     width: 60%;
   }
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 500;
   border-bottom: 4px solid #99E2D0;
   width: 100px;
   height: 55px;
   margin-left: 10px;
+}
+@media screen and (max-width: 400px) {
+  h2 {
+    font-size: 22px;
+  }
 }
 @media screen and (min-width: 768px) {
   h2 {
@@ -650,30 +640,70 @@ h2 {
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 900;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 600px) {
   h3 {
-    font-size: 26px;
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h3 {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 2560px) {
+  h3 {
+    font-size: 30px;
   }
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 22px;
 }
 @media screen and (min-width: 768px) {
   h4 {
     font-size: 22px;
   }
 }
+@media screen and (min-width: 1024px) {
+  h4 {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h4 {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 2560px) {
+  h4 {
+    font-size: 26px;
+  }
+}
 
 p {
-  font-size: 24px;
+  font-size: 20px;
 }
 @media screen and (min-width: 768px) {
   p {
     font-size: 22px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  p {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  p {
+    font-size: 20px;
   }
 }
 
@@ -705,6 +735,12 @@ header {
   padding-top: 15px;
   padding-left: 30px;
 }
+@media screen and (max-width: 400px) {
+  .fa-arrow-left {
+    font-size: 22px;
+    padding-left: 10px;
+  }
+}
 
 .logo {
   display: flex;
@@ -713,6 +749,11 @@ header {
 }
 .logo img {
   height: 40px;
+}
+@media screen and (min-width: 400px) {
+  .logo img {
+    height: 30px;
+  }
 }
 
 main {
@@ -726,6 +767,11 @@ main {
   width: 100%;
   object-fit: cover;
   object-position: 50% 70%;
+}
+@media screen and (min-width: 1024px) {
+  #banner img {
+    height: 40vh;
+  }
 }
 
 button {

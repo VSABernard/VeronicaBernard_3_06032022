@@ -19,7 +19,7 @@
 .fas {
     color: transparent;
     background-image: linear-gradient(180deg, variables.$colour-primary, variables.$colour-secondary);
-    background-clip: text;
+    background-clip: text;              /* définit la façon dont l'arrière-plan d'un élément s'étend sous la boîte de bordure, la boîte de remplissage ou la boîte de contenu.*/
     -webkit-background-clip: text;
     opacity: 0;
     transition: all 1000ms ease-in;

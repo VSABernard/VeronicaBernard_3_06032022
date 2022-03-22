@@ -75,16 +75,20 @@ h1 {
       margin-right: 20px; }
     
     @media screen and (max-width:400px) {
-      font-size: 32px;
+      font-size: 28px;
       width: 60%; }    }
 
 h2 {
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 500;
     border-bottom: 4px solid variables.$colour-tertiary;
     width: 100px;
     height: 55px; 
     margin-left: 10px;
+
+    @media screen and (max-width:400px) {
+        font-size: 22px; } 
+
     @media screen and (min-width:768px) {
         font-size: 26px; 
         height: 40px;
@@ -93,23 +97,48 @@ h2 {
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 900; 
-    @media screen and (min-width:768px) {
-        font-size: 26px; }
+    
+    @media screen and (max-width:600px) {
+        font-size: 22px; }
+
+    @media screen and (min-width:1024px) {
+         font-size: 16px; }
+
+    @media screen and (min-width:1440px) {
+        font-size: 20px; }
+
+     @media screen and (min-width:2560px) {
+        font-size: 30px; }   
 }
 
 h4 {
-    font-size: 24px; 
+    font-size: 22px; 
     @media screen and (min-width:768px) {
         font-size: 22px; }
+
+    @media screen and (min-width:1024px) {
+        font-size: 13px; }   
+        
+    @media screen and (min-width:1024px) {
+        font-size: 17px; }
+
+   @media screen and (min-width:2560px) {
+        font-size: 26px; }     
 }
 
 p {
-    font-size: 24px; 
+    font-size: 20px; 
     
     @media screen and (min-width:768px) {
         font-size: 22px; } 
+
+    @media screen and (min-width:1024px) {
+        font-size: 16px; }
+
+    @media screen and (min-width:1440px) {
+        font-size: 20px; }
 }
 
 a {
@@ -137,7 +166,12 @@ header {
     font-size: 28px;
     font-weight: 900;
     padding-top: 15px;
-    padding-left: 30px; }
+    padding-left: 30px; 
+  
+    @media screen and (max-width:400px) {
+      font-size: 22px;
+      padding-left: 10px; }
+}
     
 .logo {
     display: flex;
@@ -145,7 +179,11 @@ header {
     flex: 3; 
 
     & img {
-         height: 40px;}
+         height: 40px;
+        
+    @media screen and (min-width:400px) {
+        height: 30px; } 
+    }
   }
 
 main {
@@ -157,7 +195,11 @@ main {
     height: 25vh;
     width: 100%;
     object-fit: cover;
-    object-position: 50% 70%; }
+    object-position: 50% 70%; 
+  
+    @media screen and (min-width:1024px) {
+      height: 40vh; }
+}
 
 button {        
     align-self: center;

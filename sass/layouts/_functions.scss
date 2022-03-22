@@ -45,8 +45,8 @@
 
         li {
             &::before {
-                content: "" counter(number);
-                counter-increment: number;
+                content: "" counter(number);   /* remplace un élément avec une valeur générée */
+                counter-increment: number;     /* utilisée afin d'augmenter la valeur d'un compteur CSS d'une valeur donnée.*/
                 color: white;
                 background-color: variables.$colour-primary;
                 margin-top: -5px;
