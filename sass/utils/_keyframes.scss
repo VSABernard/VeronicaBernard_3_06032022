@@ -1,3 +1,14 @@
+/* Animation shadow pour les buttons */
+
+@keyframes shadow {
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
+    
+    100% {
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.7); }
+}
+      
+
 /* Animation slide-in-bottom pour les ligne des menus */
 
 @-webkit-keyframes slide-in-bottom {

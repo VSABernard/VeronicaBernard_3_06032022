@@ -12,7 +12,7 @@
     border: none;
     border-radius: 50px;
     cursor: pointer; 
-    @include shadow-block; }
+    @include shadow-block;  }
 
 @mixin heart {
     /* Commandes properties pour l'utilisation un pseudo-element - affichage tous les icons */
@@ -20,7 +20,7 @@
     font-style: normal;                     
     font-variant: normal;                   
     text-rendering: auto;                   
-    -webkit-font-smoothing: antialiased;    
+    -webkit-font-smoothing: antialiased;             /* lisse les caractères au niveau du pixel -> Pour des textes clairs sur fonds sombres, cette méthode fait paraître le texte plus clair.*/
     /* Commandes pour l'utilisation un pseudo-element - ref icon individuel */
     font-family: "Font Awesome 5 Free"; 
     font-size: 32px;

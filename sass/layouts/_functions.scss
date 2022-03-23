@@ -76,12 +76,6 @@
             & p {
                 font-size: 30px;    
 
-                // @media screen and (min-width:1440px) {
-                //     font-size: 40px;  }
-
-                // @media screen and (min-width:992px) {
-                //    font-size: 36px;  }
-
                 @media screen and (min-width:768px) {
                     font-size: 22px;
                     margin-left: -30px;
@@ -92,14 +86,14 @@
                     margin-left: -30px; }
 
                 @media screen and (max-width:540px) {
-                   font-size: 26px;
+                   font-size: 22px;
                    margin-left: -30px;
                   }
             }
 
             @media screen and (min-width:768px) {
                 flex-basis: 43%;
-                max-width: 60%;
+                max-width: 50%;
                 align-items: center;
                 padding: 20px 5px 20px 40px;
                 margin-left: 25px; }

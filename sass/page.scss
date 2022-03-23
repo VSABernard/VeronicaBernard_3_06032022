@@ -2,6 +2,7 @@
 @use './utils/mixins';
 @use './layouts/hearts';
 @use './layouts/menu';
+@use './layouts/commande';
 @use './layouts/footer';
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
@@ -192,23 +193,15 @@ main {
     max-width: 100%;}
 
 #banner img  {
-    height: 25vh;
+    height: 40vh;
     width: 100%;
     object-fit: cover;
     object-position: 50% 70%; 
   
     @media screen and (min-width:1024px) {
-      height: 40vh; }
+      height: 50vh; }
 }
 
-button {        
-    align-self: center;
-    margin-top: 50px;
-    font-size: 32px;
-    margin-top: 20px;
-    margin-bottom: 100px;
-    @include mixins.button; }
-  
 footer {
     padding: 40px;
 

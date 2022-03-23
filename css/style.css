@@ -93,7 +93,9 @@ header {
 }
 .head .button:hover {
   transform: scale(1.05);
-  opacity: 0.9;
+  opacity: 0.8;
+  transition: all 500ms ease-in;
+  animation: shadow 1s ease-in-out 0s 1 normal both;
 }
 
 /* Functions */
@@ -191,14 +193,14 @@ header {
 }
 @media screen and (max-width: 540px) {
   #function ol li p {
-    font-size: 26px;
+    font-size: 22px;
     margin-left: -30px;
   }
 }
 @media screen and (min-width: 768px) {
   #function ol li {
     flex-basis: 43%;
-    max-width: 60%;
+    max-width: 50%;
     align-items: center;
     padding: 20px 5px 20px 40px;
     margin-left: 25px;
@@ -366,7 +368,8 @@ header {
 }
 .card_infos h3 {
   padding-top: 10px;
-  /* Au survol "heart" change de couleur */
+  padding-bottom: 10px;
+  /* Au clic "heart" change de couleur */
 }
 .card_infos h3::before {
   /* Commandes properties pour l'utilisation un pseudo-element - affichage tous les icons */
@@ -375,6 +378,7 @@ header {
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+  /* lisse les caractères au niveau du pixel -> Pour des textes clairs sur fonds sombres, cette méthode fait paraître le texte plus clair.*/
   /* Commandes pour l'utilisation un pseudo-element - ref icon individuel */
   font-family: "Font Awesome 5 Free";
   font-size: 32px;
@@ -399,6 +403,7 @@ header {
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+  /* lisse les caractères au niveau du pixel -> Pour des textes clairs sur fonds sombres, cette méthode fait paraître le texte plus clair.*/
   /* Commandes pour l'utilisation un pseudo-element - ref icon individuel */
   font-family: "Font Awesome 5 Free";
   font-size: 32px;
@@ -415,12 +420,13 @@ header {
   transition: all 1000ms ease-in;
   font-weight: 900;
   top: 20px;
-  right: 10px;
+  right: 15px;
+  padding-left: 50px;
   background-image: linear-gradient(180deg, #9356DC, #FF79DA);
   opacity: 0;
   color: transparent;
 }
-.card_infos h3:hover::after {
+.card_infos h3:active::after {
   opacity: 1;
   transform: scale(1.3);
 }
@@ -428,28 +434,9 @@ header {
   .card_infos h3 {
     font-size: 28px;
   }
-}
-@media screen and (max-width: 450px) {
-  .card_infos h3 {
-    font-size: 26px;
-  }
-}
-@media screen and (max-width: 395px) {
-  .card_infos h3 {
-    font-size: 23px;
-  }
-}
-.card_infos p {
-  font-size: 26px;
-}
-@media screen and (min-width: 768px) {
-  .card_infos p {
-    font-size: 24px;
-  }
-}
-@media screen and (max-width: 450px) {
-  .card_infos p {
-    font-size: 20px;
+  .card_infos h3:hover::after {
+    opacity: 1;
+    transform: scale(1.3);
   }
 }
 
@@ -480,9 +467,15 @@ header {
   opacity: 0;
   transition: all 1000ms ease-in;
 }
-.fas:hover {
+.fas:active {
   opacity: 1;
   transform: scale(1.3);
+}
+@media screen and (min-width: 768px) {
+  .fas:hover {
+    opacity: 1;
+    transform: scale(1.3);
+  }
 }
 
 /* Footer */
@@ -504,11 +497,6 @@ footer h4 {
   margin-bottom: 30px;
   margin-left: 20px;
 }
-@media screen and (min-width: 769px) {
-  footer {
-    align-items: center;
-  }
-}
 @media screen and (max-width: 390px) {
   footer {
     padding: 20px;
@@ -524,11 +512,6 @@ footer h4 {
   font-size: 24px;
   padding-top: 20px;
   margin-left: 10px;
-}
-@media screen and (min-width: 769px) {
-  .foot {
-    align-items: center;
-  }
 }
 @media screen and (min-width: 769px) {
   .foot p {
@@ -558,6 +541,15 @@ footer h4 {
   }
 }
 
+/* Animation shadow pour les buttons */
+@keyframes shadow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.7);
+  }
+}
 /* Animation slide-in-bottom pour les ligne des menus */
 @-webkit-keyframes slide-in-bottom {
   0% {
@@ -939,6 +931,16 @@ h3 {
   font-size: 32px;
   font-weight: 900;
 }
+@media screen and (max-width: 450px) {
+  h3 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 395px) {
+  h3 {
+    font-size: 24px;
+  }
+}
 
 h4 {
   font-size: 26px;
@@ -946,6 +948,21 @@ h4 {
 
 p {
   font-size: 24px;
+}
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 450px) {
+  p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 395px) {
+  p {
+    font-size: 18px;
+  }
 }
 
 a {
