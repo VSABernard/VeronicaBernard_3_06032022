@@ -524,19 +524,19 @@ footer h4 {
   flex-direction: row;
 }
 
-.fa-utensils, .fa-handshake-angle {
+.fa-utensils .fa-handshake-angle {
   font-size: 30px;
   width: 10px;
-  margin-right: 40px;
-  color: inherit;
+  margin-right: 60px;
+  color: white;
 }
 @media screen and (min-width: 769px) {
-  .fa-utensils, .fa-handshake-angle {
+  .fa-utensils .fa-handshake-angle {
     font-size: 26px;
   }
 }
 @media screen and (max-width: 450px) {
-  .fa-utensils, .fa-handshake-angle {
+  .fa-utensils .fa-handshake-angle {
     font-size: 22px;
   }
 }
