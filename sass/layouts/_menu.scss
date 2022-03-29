@@ -5,7 +5,7 @@
 .main_menu {
     display: flex;
     flex-direction: column;
-    margin-top: -70px;
+    margin-top: -75px;
     padding-bottom: 100px;
     background-color: variables.$colour-background;
     border-top-left-radius: 80px;
@@ -14,14 +14,15 @@
 .page_menu {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin: 40px 30px;  
+    justify-content: flex-start;
+    margin: 40px 30px; 
     position: relative;
     height: 60px;
+    gap: 15px;
 
     @media screen and (min-width:768px) {
         justify-content: center;
-        gap: 200px; }
+        gap: 80px; }
 
     & >h1 {
         overflow-wrap: break-word; }
@@ -31,18 +32,26 @@
     font-size: 45px;
     right: 15px; 
   
+    @media screen and (max-width:400px) {
+        font-size: 30; 
+        right: 10px; }
+
+    @media screen and (max-width:525px) {
+        font-size: 36px; }
+    
     @media screen and (min-width:992px) {
-      right: 50px; }
+        right: 50px; }
 }
 
 .block_menu {
     margin-left: 20px;
     margin-bottom: 50px;
     padding-right: 30px;
+
     @media screen and (min-width:1024px) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        min-width: 100%; }
+        width: 100%; }
 }
 
 .menu {
@@ -51,146 +60,169 @@
     gap: 20px;
     margin-bottom: 50px;
     padding-right: 10px;
-
+    
     @media screen and (min-width:769px) {
       min-width: 30%;
       gap: 20px;
       flex-basis: 45%; }
-
-    & >.container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        border-radius: 30px;
-        height: 110px;
-        min-width: 100%;
-        background-color: white;
-        @include mixins.shadow-block;
-        margin-left: 5px;
-        padding-left: 20px; 
-        overflow: hidden;
-
-        -webkit-animation: slide-in-bottom 2s both;
-	        animation: slide-in-bottom 2s both;
-
-        @media screen and (min-width:768px) {
-            height: 100px;   }
-
-        @media screen and (max-width:600px) {
-            height: 90px; }
-    
-        .note {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            flex: 4;
-            width: 80%;   
-            overflow: hidden; 
-            padding-right: 20px;
-            
-            & h3, & h4 {
-                white-space: nowrap;
-                overflow: hidden;
-                max-width: calc(100%);
-                text-overflow: ellipsis;
-                direction: ltr;   }
-            
-            @media screen and (max-width:500px) {
-                flex: 1.2; }    
-
-            @media screen and (min-width:992px) {
-                flex: 3;
-                width: 70%; }
-
-            @media screen and (min-width:1024px) {
-                flex: 1; }
-        }
-
-        .price {
-            display: flex;
-            justify-content: flex-end;
-            flex: 0.25;
-            margin-bottom: 25px;
-            margin-right: 60px;
-            align-items: flex-end; 
-        
-            @media screen and (max-width:320px) {
-                margin-right: 80px; }
-
-            @media screen and (max-width:500px) {
-                margin-right: 40px; }
-
-            @media screen and (max-width:600px) {
-                margin-right: 80px; }
-
-            @media screen and (min-width:1024px) {
-                margin-right: 60px; }
-        }
-
-        .icon {
-            display: flex;
-            flex: 0.7;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
-            min-height: 100%;
-            width: 100%;
-            margin-right: -160px;
-            padding-right: 20px;
-            background: variables.$colour-tertiary;
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px; 
-            transition: margin-right 1s;
-
-            @media screen and (max-width:500px) {
-                margin-right: -200px; }
-
-            @media screen and (min-width:1000px) {
-                margin-right: -220px; }
-
-            @media screen and (min-width:1024px) {
-                margin-right: -220px; }
-
-            @media screen and (min-width:1440px) {
-                margin-right: -280px; }
-
-            @media screen and (min-width:1700px) {
-                margin-right: -350px; }    
-
-             @media screen and (min-width:2000px) {
-                margin-right: -400px; }   
-
-            @media screen and (min-width:2460px) {
-                margin-right: -500px; }   
-                
-            & .check {
-                background: variables.$colour-tertiary;
-                justify-self: center;
-                align-self: center;
-                position: absolute;
-            
-                .fa-circle-check {
-                    font-size: 40px;
-                    font-weight: 900;
-                    width: 100%;
-                    justify-self: center;
-                    align-self: center;
-                    margin-left: 20px;
-                    color: white;  }
-            }
-        }
-
-        &:hover {
-            cursor: pointer;  
-
-            .icon {
-                margin-right: 0; 
-            
-                .check  {
-                animation: spin 0.7s linear ; }
-            }
-        }
-    }   
 }
 
+.starter { 
+    -webkit-animation: slide-in-bottom 3s both;
+    animation: slide-in-bottom 3s both; }
+
+.dish {
+    -webkit-animation: slide-in-bottom 3s 0.5s both;
+    animation: slide-in-bottom 3s 0.5s both; }
+
+.dessert {
+    -webkit-animation: slide-in-bottom 3s 1s both;
+    animation: slide-in-bottom 3s 1s both; }
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 30px;
+    height: 100px;
+    min-width: 100%;
+    background-color: white;
+    @include mixins.shadow-block;
+    margin-left: 5px;
+    padding-left: 20px; 
+    overflow: hidden;
+
+    & .menu_line {
+        display: flex;
+        flex-direction: row;
+        width: 100%; }
+
+    @media screen and (min-width:768px) {
+        height: 100px;   }
+
+    @media screen and (max-width:600px) {
+        height: 90px; }
+    
+    .note {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 4;
+        width: 80%;   
+        overflow: hidden; 
+        padding-right: 20px;
+        
+        & h3, & h4 {
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: calc(100%);
+            text-overflow: ellipsis;
+            direction: ltr;   }
+        
+    @media screen and (max-width:500px) {
+        flex: 1.2; }    
+
+    @media screen and (min-width:992px) {
+        flex: 3;
+        width: 70%; }
+
+    @media screen and (min-width:1024px) {
+        flex: 1; }
+    }
+
+    .price {
+        display: flex;
+        justify-content: flex-end;
+        flex: 0.25;
+        margin-bottom: 25px;
+        margin-right: 60px;
+        align-items: flex-end; 
+    
+        @media screen and (max-width:320px) {
+            margin-right: 80px; }
+
+        @media screen and (max-width:500px) {
+            margin-right: -50px; }
+
+        @media screen and (max-width:650px) {
+            margin-right: 100px; }
+
+        @media screen and (min-width:1024px) {
+            margin-right: 60px; }
+
+        @media screen and (min-width:1700px) {
+            margin-right: 100px; }
+
+        @media screen and (min-width:2000px) {
+            margin-right: 150px; }
+
+        @media screen and (min-width:2460px) {
+            margin-right: 250px; }
+    }
+
+    .icon {
+        display: flex;
+        flex: 0.7;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        min-height: 100%;
+        width: 100%;
+        margin-right: -160px;
+        padding-right: 20px;
+        background: variables.$colour-tertiary;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px; 
+        transition: margin-right 1s;
+
+        @media screen and (max-width:500px) {
+            margin-right: -200px; }
+
+        @media screen and (min-width:900px) {
+            margin-right: -205px; }
+
+        @media screen and (min-width:1024px) {
+            margin-right: -220px; }
+
+        @media screen and (min-width:1440px) {
+            margin-right: -280px; }
+
+        @media screen and (min-width:1700px) {
+            margin-right: -350px; }    
+
+        @media screen and (min-width:2000px) {
+            margin-right: -400px; }   
+
+        @media screen and (min-width:2460px) {
+            margin-right: -500px; }   
+            
+        & .check {
+            background: variables.$colour-tertiary;
+            justify-self: center;
+            align-self: center;
+            position: absolute;
+        
+            .fa-circle-check {
+                font-size: 40px;
+                font-weight: 900;
+                width: 100%;
+                justify-self: center;
+                align-self: center;
+                margin-left: 20px;
+                color: white;  }
+        }
+    }
+
+    &:hover {
+        cursor: pointer;  
+
+        .icon {
+            margin-right: 0; 
+        
+            .check  {
+            animation: spin 0.7s linear ; }
+        }
+    }
+}    
+  
 

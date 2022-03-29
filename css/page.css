@@ -260,7 +260,7 @@
 .main_menu {
   display: flex;
   flex-direction: column;
-  margin-top: -70px;
+  margin-top: -75px;
   padding-bottom: 100px;
   background-color: #f6f6f6;
   border-top-left-radius: 80px;
@@ -270,15 +270,16 @@
 .page_menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 40px 30px;
   position: relative;
   height: 60px;
+  gap: 15px;
 }
 @media screen and (min-width: 768px) {
   .page_menu {
     justify-content: center;
-    gap: 200px;
+    gap: 80px;
   }
 }
 .page_menu > h1 {
@@ -288,6 +289,17 @@
 .fa-heart {
   font-size: 45px;
   right: 15px;
+}
+@media screen and (max-width: 400px) {
+  .fa-heart {
+    font-size: 30;
+    right: 10px;
+  }
+}
+@media screen and (max-width: 525px) {
+  .fa-heart {
+    font-size: 36px;
+  }
 }
 @media screen and (min-width: 992px) {
   .fa-heart {
@@ -304,7 +316,7 @@
   .block_menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    min-width: 100%;
+    width: 100%;
   }
 }
 
@@ -322,32 +334,51 @@
     flex-basis: 45%;
   }
 }
-.menu > .container {
+
+.starter {
+  -webkit-animation: slide-in-bottom 3s both;
+  animation: slide-in-bottom 3s both;
+}
+
+.dish {
+  -webkit-animation: slide-in-bottom 3s 0.5s both;
+  animation: slide-in-bottom 3s 0.5s both;
+}
+
+.dessert {
+  -webkit-animation: slide-in-bottom 3s 1s both;
+  animation: slide-in-bottom 3s 1s both;
+}
+
+.container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-radius: 30px;
-  height: 110px;
+  height: 100px;
   min-width: 100%;
   background-color: white;
   box-shadow: 5px 5px 5px gainsboro;
   margin-left: 5px;
   padding-left: 20px;
   overflow: hidden;
-  -webkit-animation: slide-in-bottom 2s both;
-  animation: slide-in-bottom 2s both;
+}
+.container .menu_line {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .menu > .container {
+  .container {
     height: 100px;
   }
 }
 @media screen and (max-width: 600px) {
-  .menu > .container {
+  .container {
     height: 90px;
   }
 }
-.menu > .container .note {
+.container .note {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -356,7 +387,7 @@
   overflow: hidden;
   padding-right: 20px;
 }
-.menu > .container .note h3, .menu > .container .note h4 {
+.container .note h3, .container .note h4 {
   white-space: nowrap;
   overflow: hidden;
   max-width: 100%;
@@ -364,22 +395,22 @@
   direction: ltr;
 }
 @media screen and (max-width: 500px) {
-  .menu > .container .note {
+  .container .note {
     flex: 1.2;
   }
 }
 @media screen and (min-width: 992px) {
-  .menu > .container .note {
+  .container .note {
     flex: 3;
     width: 70%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .menu > .container .note {
+  .container .note {
     flex: 1;
   }
 }
-.menu > .container .price {
+.container .price {
   display: flex;
   justify-content: flex-end;
   flex: 0.25;
@@ -388,26 +419,41 @@
   align-items: flex-end;
 }
 @media screen and (max-width: 320px) {
-  .menu > .container .price {
+  .container .price {
     margin-right: 80px;
   }
 }
 @media screen and (max-width: 500px) {
-  .menu > .container .price {
-    margin-right: 40px;
+  .container .price {
+    margin-right: -50px;
   }
 }
-@media screen and (max-width: 600px) {
-  .menu > .container .price {
-    margin-right: 80px;
+@media screen and (max-width: 650px) {
+  .container .price {
+    margin-right: 100px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .menu > .container .price {
+  .container .price {
     margin-right: 60px;
   }
 }
-.menu > .container .icon {
+@media screen and (min-width: 1700px) {
+  .container .price {
+    margin-right: 100px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .container .price {
+    margin-right: 150px;
+  }
+}
+@media screen and (min-width: 2460px) {
+  .container .price {
+    margin-right: 250px;
+  }
+}
+.container .icon {
   display: flex;
   flex: 0.7;
   justify-content: center;
@@ -423,47 +469,47 @@
   transition: margin-right 1s;
 }
 @media screen and (max-width: 500px) {
-  .menu > .container .icon {
+  .container .icon {
     margin-right: -200px;
   }
 }
-@media screen and (min-width: 1000px) {
-  .menu > .container .icon {
-    margin-right: -220px;
+@media screen and (min-width: 900px) {
+  .container .icon {
+    margin-right: -205px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .menu > .container .icon {
+  .container .icon {
     margin-right: -220px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .menu > .container .icon {
+  .container .icon {
     margin-right: -280px;
   }
 }
 @media screen and (min-width: 1700px) {
-  .menu > .container .icon {
+  .container .icon {
     margin-right: -350px;
   }
 }
 @media screen and (min-width: 2000px) {
-  .menu > .container .icon {
+  .container .icon {
     margin-right: -400px;
   }
 }
 @media screen and (min-width: 2460px) {
-  .menu > .container .icon {
+  .container .icon {
     margin-right: -500px;
   }
 }
-.menu > .container .icon .check {
+.container .icon .check {
   background: #99E2D0;
   justify-self: center;
   align-self: center;
   position: absolute;
 }
-.menu > .container .icon .check .fa-circle-check {
+.container .icon .check .fa-circle-check {
   font-size: 40px;
   font-weight: 900;
   width: 100%;
@@ -472,13 +518,13 @@
   margin-left: 20px;
   color: white;
 }
-.menu > .container:hover {
+.container:hover {
   cursor: pointer;
 }
-.menu > .container:hover .icon {
+.container:hover .icon {
   margin-right: 0;
 }
-.menu > .container:hover .icon .check {
+.container:hover .icon .check {
   animation: spin 0.7s linear;
 }
 
@@ -612,10 +658,13 @@ td, th {
 
 html {
   min-height: 100vh;
+  align-content: center;
 }
 
 body {
   min-height: 100vh;
+  max-width: 1600px;
+  margin: auto;
 }
 
 /* Fonts */
@@ -627,20 +676,21 @@ h1 {
   font-family: Shrikhand;
   font-size: 40px;
   font-weight: 500;
-  width: 80%;
+  width: 100%;
   overflow-wrap: break-word;
   margin-left: 10px;
+  margin-right: 10px;
 }
 @media screen and (max-width: 525px) {
   h1 {
-    font-size: 36px;
+    font-size: 34px;
     margin-right: 20px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 445px) {
   h1 {
-    font-size: 28px;
-    width: 60%;
+    font-size: 30px;
+    width: 100%;
   }
 }
 
@@ -649,13 +699,8 @@ h2 {
   font-weight: 500;
   border-bottom: 4px solid #99E2D0;
   width: 100px;
-  height: 55px;
+  height: 45px;
   margin-left: 10px;
-}
-@media screen and (max-width: 400px) {
-  h2 {
-    font-size: 22px;
-  }
 }
 @media screen and (min-width: 768px) {
   h2 {
@@ -663,6 +708,16 @@ h2 {
     height: 40px;
     min-width: fit-content;
     align-self: center;
+  }
+}
+@media screen and (max-width: 520px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 400px) {
+  h2 {
+    font-size: 20px;
   }
 }
 
@@ -677,7 +732,7 @@ h3 {
 }
 @media screen and (min-width: 1024px) {
   h3 {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -786,6 +841,8 @@ header {
 main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-self: center;
   max-width: 100%;
 }
 
@@ -793,7 +850,7 @@ main {
   height: 40vh;
   width: 100%;
   object-fit: cover;
-  object-position: 50% 70%;
+  object-position: 50% 80%;
 }
 @media screen and (min-width: 1024px) {
   #banner img {

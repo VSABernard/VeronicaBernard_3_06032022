@@ -52,10 +52,13 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
  
  html {
    min-height: 100vh;
+   align-content: center;
  }
 
 body {
    min-height: 100vh;
+   max-width: 1600px;
+   margin: auto;
 }
 
  /* Fonts */
@@ -67,34 +70,39 @@ h1 {
     font-family: Shrikhand;
     font-size: 40px;
     font-weight: 500; 
-    width: 80%;
+    width: 100%;
     overflow-wrap: break-word;
     margin-left: 10px; 
-  
+    margin-right: 10px;
+
     @media screen and (max-width:525px) {
-      font-size: 36px;
-      margin-right: 20px; }
-    
-    @media screen and (max-width:400px) {
-      font-size: 28px;
-      width: 60%; }    }
+        font-size: 34px;
+        margin-right: 20px; }
+
+    @media screen and (max-width:445px) {
+      font-size: 30px;
+      width: 100%; }
+}
 
 h2 {
     font-size: 26px;
     font-weight: 500;
     border-bottom: 4px solid variables.$colour-tertiary;
     width: 100px;
-    height: 55px; 
+    height: 45px; 
     margin-left: 10px;
-
-    @media screen and (max-width:400px) {
-        font-size: 22px; } 
 
     @media screen and (min-width:768px) {
         font-size: 26px; 
         height: 40px;
         min-width: fit-content;
         align-self: center; }
+
+    @media screen and (max-width:520px) {
+        font-size: 24px; }
+        
+    @media screen and (max-width:400px) {
+        font-size: 20px; } 
 }
 
 h3 {
@@ -105,7 +113,7 @@ h3 {
         font-size: 22px; }
 
     @media screen and (min-width:1024px) {
-         font-size: 16px; }
+         font-size: 20px; }
 
     @media screen and (min-width:1440px) {
         font-size: 20px; }
@@ -190,13 +198,15 @@ header {
 main {
     display: flex;
     flex-direction: column; 
-    max-width: 100%;}
+    justify-content: center;
+    align-self: center;
+    max-width: 100%; }
 
 #banner img  {
     height: 40vh;
     width: 100%;
     object-fit: cover;
-    object-position: 50% 70%; 
+    object-position: 50% 80%; 
   
     @media screen and (min-width:1024px) {
       height: 50vh; }
