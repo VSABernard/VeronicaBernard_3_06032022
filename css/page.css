@@ -594,19 +594,19 @@ footer h4 {
   flex-direction: row;
 }
 
-.fa-utensils .fa-handshake-angle {
+i {
   font-size: 30px;
   width: 10px;
-  margin-right: 60px;
+  margin-right: 40px;
   color: white;
 }
 @media screen and (min-width: 769px) {
-  .fa-utensils .fa-handshake-angle {
+  i {
     font-size: 26px;
   }
 }
 @media screen and (max-width: 450px) {
-  .fa-utensils .fa-handshake-angle {
+  i {
     font-size: 22px;
   }
 }
